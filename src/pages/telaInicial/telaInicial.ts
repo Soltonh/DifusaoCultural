@@ -14,7 +14,7 @@ export const NavBar = styled.div`
 `
 
 export const Imagem = styled.img`
-    width: 5vw;
+    width: 75%;
     padding: 20px;
 `
 
@@ -34,4 +34,20 @@ export const H3 = styled.h3`
     margin-top: auto;   
     margin-bottom: auto;
     font-size: 30px;
+`
+
+export const H1 = styled.h1`
+    color: #264790;
+    font-size: 30px;
+    width: 80vw;
+    margin: auto;
+`
+
+export const QuadradosSec = styled.section`
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    padding: 40px;
+
 `
