@@ -1,43 +1,74 @@
-import type React from "react";
+import React from "react";
 import styled from "styled-components";
 
-interface SanfonaTextosProps{
-    titulo?: string;
-    texto?: string;
-}
-
-export const Divsanfona = styled.div`
-    margin-top: 5vh;
-`
+type Item = {id: string, titulo: React.ReactNode; conteudo: React.ReactNode}
 
 
-export const BotaoSanfona = styled.button`
-    width: 100%;
-    background-color: white;
-    border: 2px solid black;
-    color: black;
-    text-align: left;
-    font-size: 1.5rem; 
-    position: relative;
+export const DivGeral = styled.div`
+    display: grid;
+    padding-top: 2rem;
+`;
 
-    &::after {
-        content: "➜";
-        margin-left: 80%;
-        transform: rotate(-40%);
-        font-size: 2rem;
+export const Detalhes = styled.details`
+    border: 1px solid #264790;
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+
+    &[open] ${'' /* gira a setinha quando abre */} span[aria-hidden] {
+        transform: rotate(180deg);
     }
 `
 
+const Summary = styled.summary`
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  cursor: pointer;
+  user-select: none;
+  background-color: #264790;
+  padding-right: 2rem;
 
-export const SanfonaTextos: React.FC<SanfonaTextosProps> = ({titulo, texto}) => {
-    return(
+  &:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 10px;
+  }
+
+  /* esconde o marcador padrão do summary */
+  &::-webkit-details-marker { display: none; }
+`;
+
+const Titulo = styled.span`
+  font-weight: 600;
+  padding: 1rem;
+`;
+
+const Seta = styled.span`
+  transition: transform 500ms ease;
+  font-size: 3rem;
+  color:#ffffff;
+`;
+
+const Painel = styled.div`
+  color: #374151;
+  padding: 2rem;
+`;
+
+export function SanfonaTextos({items}: {items: Item[]}){
+    return (
         <>
-            <Divsanfona>
-                <BotaoSanfona>{titulo}</BotaoSanfona>
-                <a>{texto}</a>
-            </Divsanfona>
+            <DivGeral>
+                {items.map((it) => (
+                    <Detalhes key={it.id}>
+                        <Summary>
+                            <Titulo>{it.titulo}</Titulo>
+                            <Seta aria-hidden>▾</Seta>
+                        </Summary>
+                        <Painel>{it.conteudo}</Painel>
+                    </Detalhes>
+                ))}
+            </DivGeral>
         </>
     )
 }
-
-export default SanfonaTextos

@@ -3,16 +3,14 @@ import React from "react";
 
 export const Fundo = styled.div`
     display: grid;
-    grid-template-columns: 13vw 75vw;
-    width: 100%;
-    margin-bottom: auto;
+    grid-template-columns: repeat(7,1fr);
+    width: 99.2vw;
     position: sticky;
-    top: 0;
-    left: 0;
-    padding-top: 3vh;
-    background-color: white; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    background-color: #b3c8f5ff; 
 `
-
 
 export const Icones = styled.svg`
     width: 5vw;
@@ -31,10 +29,9 @@ export const Titulo = styled.h1`
     font-size: 3rem;
     margin-top: auto;
     margin-bottom: auto;
-    
+    text-align: left;
+    grid-column: 2/7;
 `
-
-
 interface IndicadoPagProps {
     src?: string;
     tamanho?: string;
