@@ -24,9 +24,9 @@ const TelaInicial: React.FC = () => {
             <H1>Aqui você encontra informações sobre:</H1>
             <QuadradosSec>
                 <BlocoTelaInicial legenda="Saúde" src={saude} tamanho="6.5vw" to="/saude"/>
-                <BlocoTelaInicial cor="#99E17A" legenda="Educação" src={educa} tamanho="6.5vw"/>
-                <BlocoTelaInicial legenda="Naturalização" src={bemestar} tamanho="6.5vw"/>
-                <BlocoTelaInicial cor="#99E17A" legenda="Assistência Social" src={assisocial} tamanho="6.5vw"/>
+                <BlocoTelaInicial cor="#99E17A" legenda="Educação" src={educa} tamanho="6.5vw" to="/educa"/>
+                <BlocoTelaInicial legenda="Naturalização" src={bemestar} tamanho="6.5vw" to="/naturaliza"/>
+                <BlocoTelaInicial cor="#99E17A" legenda="Assistência Social" src={assisocial} tamanho="6.5vw" to="/assistencia"/>
                 <BlocoTelaInicial legenda="Documentação" src={documento} tamanho="6.5vw"/>
                 <BlocoTelaInicial cor="#99E17A" legenda="Ajuda e orientação" src={orientacao} tamanho="6.5vw"/>
             </QuadradosSec>

@@ -14,7 +14,8 @@ export const Paragrafo = styled.p`
 export const ParagrafoConteudo = styled.li`
     font-size: 1.8rem;
     color: black;
-    padding-bottom: 1rem;
+    padding-bottom: 0.7rem;
+    font-weight: normal;
 `;
 
 export const ParagrafoConteudoLink = styled.p`

@@ -21,7 +21,7 @@ export const Icones = styled.svg`
 
 export const ImagemPag = styled.img<IndicadoPagProps>`
     width: ${({tamanho}) => tamanho};
-    filter: brightness(60%);
+    filter: grayscale(50%);;
 `
 
 export const Titulo = styled.h1`
