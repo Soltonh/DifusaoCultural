@@ -4,8 +4,28 @@ import IndicadoPag from "../../components/IndicadorPag/IndicadorPag"
 import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoLink, ParagrafoConteudoTexto } from "../saude/saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import { A, ParagrafoLinkPonto } from "./educacao";
+import { useEffect } from "react";
 
 const TelaEduca: React.FC = () => {
+
+    useEffect(() => {
+            const scrollToHash = () => {
+            const hash = window.location.hash;
+            if (!hash) return;
+    
+            const id = hash.slice(1); // tira o "#"
+            const el = document.getElementById(id);
+    
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            };
+            setTimeout(scrollToHash, 0);
+            
+            window.addEventListener("hashchange", scrollToHash);
+            return () => window.removeEventListener("hashchange", scrollToHash);
+    }, []);
+
     return (
         <>  
             <IndicadoPag src={educaimg} tamanho="5vw" titulo="Educação no Brasil"/>
@@ -16,7 +36,7 @@ const TelaEduca: React.FC = () => {
                 </Paragrafo>
                 <SanfonaTextos
                     items={[
-                        {id: "1", titulo: (<><H2>Como aprender português.</H2></>), 
+                        {id: "educa1", titulo: (<><H2>Como aprender português.</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -41,7 +61,7 @@ const TelaEduca: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "2", titulo: (<><H2>Educação infantil, fundamental e média.</H2></>), 
+                        {id: "educa2", titulo: (<><H2>Educação infantil, fundamental e média.</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -62,7 +82,7 @@ const TelaEduca: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "3", titulo: (<><H2>Documentos necessários para realização da matrícula escolar.</H2></>), 
+                        {id: "educa3", titulo: (<><H2>Documentos necessários para realização da matrícula escolar.</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -96,7 +116,7 @@ const TelaEduca: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "4", titulo: (<><H2>Educação para jovens e adultros - EJA</H2></>), 
+                        {id: "educa4", titulo: (<><H2>Educação para jovens e adultros - EJA</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -135,7 +155,7 @@ const TelaEduca: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "5", titulo: (<><H2>Revalidação de diplomas estrangeiros.</H2></>), 
+                        {id: "educa5", titulo: (<><H2>Revalidação de diplomas estrangeiros.</H2></>), 
                         conteudo: 
                         (
                             <>

@@ -15,7 +15,7 @@ export const Detalhes = styled.details`
     background: #fff;
     overflow: hidden;
 
-    &[open] ${'' /* gira a setinha quando abre */} span[aria-hidden] {
+    &[open] ${''} span[aria-hidden] {
         transform: rotate(180deg);
     }
 `
@@ -25,7 +25,6 @@ const Summary = styled.summary`
   display: grid;
   grid-template-columns: 1fr auto;
   cursor: pointer;
-  user-select: none;
   background-color: #264790;
   padding-right: 2rem;
 
@@ -60,7 +59,7 @@ export function SanfonaTextos({items}: {items: Item[]}){
         <>
             <DivGeral>
                 {items.map((it) => (
-                    <Detalhes key={it.id}>
+                    <Detalhes key={it.id} open id={it.id}>
                         <Summary>
                             <Titulo>{it.titulo}</Titulo>
                             <Seta aria-hidden>▾</Seta>

@@ -23,6 +23,7 @@ export const TabelaCentral = styled.table`
 
 export const TextoLink = styled.a`
     color: black;
+    text-decoration: underline;
 
     &:hover{
         color: blue;

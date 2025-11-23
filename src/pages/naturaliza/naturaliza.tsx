@@ -4,8 +4,28 @@ import IndicadoPag from "../../components/IndicadorPag/IndicadorPag"
 import { DivTextos, H2, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } from "../saude/saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import {TabelaCentral, TextoLink} from "./naturaliza"
+import { useEffect } from "react";
 
 const TelaNaturaliza: React.FC = () => {
+
+    useEffect(() => {
+            const scrollToHash = () => {
+            const hash = window.location.hash;
+            if (!hash) return;
+    
+            const id = hash.slice(1); // tira o "#"
+            const el = document.getElementById(id);
+    
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            };
+            setTimeout(scrollToHash, 0);
+            
+            window.addEventListener("hashchange", scrollToHash);
+            return () => window.removeEventListener("hashchange", scrollToHash);
+    }, []);
+
     return (
         <>  
             <IndicadoPag src={educaimg} tamanho="5vw" titulo="Naturalização"/>
@@ -65,7 +85,7 @@ const TelaNaturaliza: React.FC = () => {
                 </TabelaCentral>
                 <SanfonaTextos
                     items={[
-                        {id: "1", titulo: (<><H2>Naturalização ordinária.</H2></>), 
+                        {id: "naturaliza1", titulo: (<><H2>Naturalização ordinária.</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -110,7 +130,7 @@ const TelaNaturaliza: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "2", titulo: (<><H2>Hipóteses de redução de prazo na naturalização ordinária</H2></>), 
+                        {id: "naturaliza2", titulo: (<><H2>Hipóteses de redução de prazo na naturalização ordinária</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -142,7 +162,7 @@ const TelaNaturaliza: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "3", titulo: (<><H2>Naturalização extraordinária, especial, provisória e naturalização definitiva</H2></>), 
+                        {id: "naturaliza3", titulo: (<><H2>Naturalização extraordinária, especial, provisória e naturalização definitiva</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -172,7 +192,7 @@ const TelaNaturaliza: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "4", titulo: (<><H2>Como solicitar a naturalização</H2></>), 
+                        {id: "naturaliza4", titulo: (<><H2>Como solicitar a naturalização</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -184,7 +204,7 @@ const TelaNaturaliza: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "5", titulo: (<><H2>Documentos mais solicitados</H2></>), 
+                        {id: "naturaliza5", titulo: (<><H2>Documentos mais solicitados</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -201,7 +221,7 @@ const TelaNaturaliza: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "5", titulo: (<><H2>Regularização migratória</H2></>), 
+                        {id: "naturaliza6", titulo: (<><H2>Regularização migratória</H2></>), 
                         conteudo: 
                         (
                             <>

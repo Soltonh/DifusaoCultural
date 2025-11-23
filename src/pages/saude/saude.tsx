@@ -3,8 +3,28 @@ import Saudeimg from "../../assets/saude.png"
 import IndicadoPag from "../../components/IndicadorPag/IndicadorPag"
 import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoLink, ParagrafoConteudoTexto } from "./saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
+import { useEffect } from "react";
 
 const TelaSaude: React.FC = () => {
+
+    useEffect(() => {
+        const scrollToHash = () => {
+        const hash = window.location.hash;
+        if (!hash) return;
+
+        const id = hash.slice(1); // tira o "#"
+        const el = document.getElementById(id);
+
+        if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+        };
+        setTimeout(scrollToHash, 0);
+        
+        window.addEventListener("hashchange", scrollToHash);
+        return () => window.removeEventListener("hashchange", scrollToHash);
+    }, []);
+
     return (
         <>  
             <IndicadoPag src={Saudeimg} tamanho="5vw" titulo="Saúde no Brasil"/>
@@ -22,7 +42,7 @@ const TelaSaude: React.FC = () => {
                 </Paragrafo>
                 <SanfonaTextos
                     items={[
-                        {id: "1", titulo: (<><H2>Onde buscar atendimento?</H2></>), 
+                        {id: "saude1", titulo: (<><H2>Onde buscar atendimento?</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -53,7 +73,7 @@ const TelaSaude: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "2", titulo: (<><H2>Como ser atendido?</H2></>), 
+                        {id: "saude2", titulo: (<><H2>Como ser atendido?</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -82,7 +102,7 @@ const TelaSaude: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "3", titulo: (<><H2>Serviços e tratamentos oferecidos.</H2></>), 
+                        {id: "saude3", titulo: (<><H2>Serviços e tratamentos oferecidos.</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -115,7 +135,7 @@ const TelaSaude: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "4", titulo: (<><H2>Telefones e links úteis.</H2></>), 
+                        {id: "saude4", titulo: (<><H2>Telefones e links úteis.</H2></>), 
                         conteudo: 
                         (
                             <>

@@ -5,14 +5,34 @@ import { DivTextos, H2, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } f
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import { A} from "../educacao/educacao";
 import { TextoLink } from "../naturaliza/naturaliza";
+import { useEffect } from "react";
 
 const TelaAssistencia: React.FC = () => {
+    
+    useEffect(() => {
+            const scrollToHash = () => {
+            const hash = window.location.hash;
+            if (!hash) return;
+    
+            const id = hash.slice(1); // tira o "#"
+            const el = document.getElementById(id);
+    
+            if (el) {
+                el.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+            };
+            setTimeout(scrollToHash, 0);
+            
+            window.addEventListener("hashchange", scrollToHash);
+            return () => window.removeEventListener("hashchange", scrollToHash);
+    }, []);
+
     return (
         <>  
             <IndicadoPag src={educaimg} tamanho="5vw" titulo="Assistência Social"/>
             <DivTextos>
                 <Paragrafo>
-                    fim de facilitar o acesso, nossas informações foram estabelecidas em nível federal e também com foco na cidade de São Paulo. 
+                    A fim de facilitar o acesso, nossas informações foram estabelecidas em nível federal e também com foco na cidade de São Paulo. 
                     As pessoas migrantes que se encontram em território brasileiro, independentemente de sua nacionalidade ou condição migratória, 
                     têm direito de acesso às ofertas da política de assistência social quando dela necessitem.
                 </Paragrafo>
@@ -22,7 +42,7 @@ const TelaAssistencia: React.FC = () => {
                 </Paragrafo>
                 <SanfonaTextos
                     items={[
-                        {id: "1", titulo: (<><H2>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS)</H2></>), 
+                        {id: "assistencia1", titulo: (<><H2>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS)</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -35,7 +55,7 @@ const TelaAssistencia: React.FC = () => {
                                     Meios de comunicação:
                                 </ParagrafoConteudoTexto>
                                 <ParagrafoConteudo>Disque Social - Ouvidoria: 121.</ParagrafoConteudo>
-                                <ParagrafoConteudo>Pelo aplicativo de mensagens WhatsApp no número (61) 61 4042-1552 – Ministério da Justiça (para dúvidas sobre imigração).</ParagrafoConteudo>                      
+                                <ParagrafoConteudo>Pelo aplicativo de mensagens WhatsApp no número (61) 4042-1552 – Ministério da Justiça (para dúvidas sobre imigração).</ParagrafoConteudo>                      
                             </>
                         ),
                         },
@@ -43,7 +63,7 @@ const TelaAssistencia: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "2", titulo: (<><H2>Rede de Acolhimento</H2></>), 
+                        {id: "assistencia2", titulo: (<><H2>Rede de Acolhimento</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -91,7 +111,7 @@ const TelaAssistencia: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "3", titulo: (<><H2>Programas sociais do governo</H2></>), 
+                        {id: "assistencia3", titulo: (<><H2>Programas sociais do governo</H2></>), 
                         conteudo: 
                         (
                             <>
@@ -121,7 +141,7 @@ const TelaAssistencia: React.FC = () => {
                 />
                 <SanfonaTextos
                     items={[
-                        {id: "4", titulo: (<><H2>Pessoas em situação de rua</H2></>), 
+                        {id: "assistencia4", titulo: (<><H2>Pessoas em situação de rua</H2></>), 
                         conteudo: 
                         (
                             <>

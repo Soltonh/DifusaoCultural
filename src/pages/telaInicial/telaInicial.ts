@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 
 export const FundoGeral = styled.div`
-    width: 100vw;
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -10,19 +9,18 @@ export const FundoGeral = styled.div`
 
 export const NavBar = styled.div`
     display: grid;
-    grid-template-columns: 5vw 50vw 35vw 5vw;
+    grid-template-columns: 99vw;
 `
 
 export const Imagem = styled.img`
-    width: 75%;
+    width: 100%;
     padding: 20px;
+    margin: auto;
 `
 
 export const H2 = styled.h2`
     color: #264790;
-    margin-right: auto ;
-    margin-top: auto;   
-    margin-bottom: auto;
+    margin: auto auto auto 0;
     font-weight: bold;
     font-size: 30px;
 `
@@ -49,5 +47,11 @@ export const QuadradosSec = styled.section`
     grid-template-columns: repeat(3,1fr);
     margin: auto;
     padding: 40px;
+
+`
+
+export const DivDuvidas = styled.a`
+    display: grid;
+    grid-template-columns: 20vw 5vw;
 
 `
