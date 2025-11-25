@@ -80,32 +80,28 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 `,$y=ee.div`
     display: grid;
     grid-template-columns: repeat(1,1fr);
-`,Wy=ee.img`
-    width: 100%;
-    padding: 20px;
-    margin: auto;
-`,Py=ee.h2`
+`,Wy=ee.h2`
     color: #264790;
     font-weight: bold;
     font-size: 30px;
-`,Iy=ee.h3`
+`,Py=ee.h3`
     color: black;
     font-weight: 400;
     margin: auto;
     font-size: 2vw;
-`,ex=ee.h1`
+`,Iy=ee.h1`
     color: #264790;
     font-size: 30px;
     width: 80vw;
     margin: auto;
-`,tx=ee.section`
+`,ex=ee.section`
     width: 60vw;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: auto;
     padding: 40px;
 
-`,ax=ee.div`
+`,tx=ee.div`
     border: solid 2px black;
     border-radius: 35px;
     width: 60vw;
@@ -118,7 +114,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     height: 3vh;
     color: black;
     transform: scaleX(-1);
-`,lx=ee.input`
+`,ax=ee.input`
     width: 100%;
     height: 100%;
     background-color: white;
@@ -135,7 +131,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     &:focus{
         border: solid white 1px;
     }
-`,nx=()=>r.jsx(r.Fragment,{children:r.jsxs(ax,{children:[r.jsx(Jh,{"aria-hidden":"true",xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",fill:"none",viewBox:"0 0 24 24",children:r.jsx("path",{stroke:"currentColor","stroke-linecap":"round","stroke-width":"2",d:"m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"})}),r.jsx(lx,{placeholder:"O que você procura?"}),r.jsx(Jh,{"aria-hidden":"true",xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",fill:"none",viewBox:"0 0 24 24",children:r.jsx("path",{stroke:"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M6 18 17.94 6M18 18 6.06 6"})})]})}),ix=ee(sr)`
+`,lx=()=>r.jsx(r.Fragment,{children:r.jsxs(tx,{children:[r.jsx(Jh,{"aria-hidden":"true",xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",fill:"none",viewBox:"0 0 24 24",children:r.jsx("path",{stroke:"currentColor","stroke-linecap":"round","stroke-width":"2",d:"m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"})}),r.jsx(ax,{placeholder:"O que você procura?"}),r.jsx(Jh,{"aria-hidden":"true",xmlns:"http://www.w3.org/2000/svg",width:"24",height:"24",fill:"none",viewBox:"0 0 24 24",children:r.jsx("path",{stroke:"currentColor","stroke-linecap":"round","stroke-linejoin":"round","stroke-width":"2",d:"M6 18 17.94 6M18 18 6.06 6"})})]})}),nx=ee(sr)`
     background-color: ${({cor:i})=>i||"#DCF4CE"};
     display: grid;
     grid-template-rows: auto 1fr;
@@ -151,11 +147,11 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
         max-width: 240px;
         padding: 12px;
     }
-`,ux=ee.h4`
+`,ix=ee.h4`
     color: #264790;
     text-align: center;
     margin-top: 2rem;
-`,rx=ee.img`
+`,ux=ee.img`
     width: ${({tamanho:i})=>i||"6.8vw"};
     max-width: 180px;
     min-width: 48px;
@@ -167,14 +163,14 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     background-color: #fff;
     border-radius: 35px;
     padding: clamp(10px, 2vw, 22px);
-`,pn=({cor:i,legenda:o,src:f,tamanho:c,navegar:m})=>r.jsx(r.Fragment,{children:r.jsxs(ix,{cor:i,to:m,children:[r.jsx(rx,{src:f,tamanho:c}),r.jsx(ux,{children:o})]})}),qp="/DifusaoCultural/assets/saude-7ImS2Dk7.png",Hp="/DifusaoCultural/assets/educacao-BNsG8wpj.png",Lp="/DifusaoCultural/assets/bemestar-BrQvk-sp.png",Yp="/DifusaoCultural/assets/assissocial-BfrogoaC.png",Gp="/DifusaoCultural/assets/documentos-C78HTeaz.png",Xp="/DifusaoCultural/assets/orientacao-ccCEYi80.png",ox="data:image/svg+xml,%3csvg%20id='Layer_1'%20enable-background='new%200%200%20512%20512'%20viewBox='0%200%20512%20512'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3clinearGradient%20id='lg1'%3e%3cstop%20offset='0'%20stop-color='%23f8da30'/%3e%3cstop%20offset='1'%20stop-color='%23fdab22'/%3e%3c/linearGradient%3e%3clinearGradient%20id='SVGID_1_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='98.095'%20x2='594.545'%20xlink:href='%23lg1'%20y1='614.19'%20y2='117.74'/%3e%3clinearGradient%20id='SVGID_00000127727518918065102020000017791146191554523274_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='-2.048'%20x2='494.402'%20xlink:href='%23lg1'%20y1='514.037'%20y2='17.597'/%3e%3clinearGradient%20id='SVGID_00000183939817164987541050000001603171435237703323_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='-102.181'%20x2='394.259'%20xlink:href='%23lg1'%20y1='413.904'%20y2='-82.546'/%3e%3cg%20id='Layer_2_00000139265716193719411640000006018357986890353059_'%3e%3cg%20id='Layer_2_copy_11'%3e%3cg%20id='_62'%3e%3cg%20id='_62-2'%3e%3cpath%20d='m71.2%200h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_1_)'/%3e%3cpath%20d='m71.2%20200.3h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_00000127727518918065102020000017791146191554523274_)'/%3e%3cpath%20d='m71.2%20400.6h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_00000183939817164987541050000001603171435237703323_)'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e",Qp="data:image/svg+xml,%3csvg%20id='outline'%20height='512'%20viewBox='0%200%2064%2064'%20width='512'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m32%200a30.034%2030.034%200%200%200%20-30%2030%2029.734%2029.734%200%200%200%205.346%2017.1l-5.223%2014.211a2%202%200%200%200%202.567%202.566l16.267-5.977a30%2030%200%201%200%2011.043-57.9zm0%2056a25.824%2025.824%200%200%201%20-10.215-2.086%202%202%200%200%200%20-1.476-.038l-12.94%204.755%204.1-11.153a2%202%200%200%200%20-.278-1.89%2026%2026%200%201%201%2020.809%2010.412z'/%3e%3cpath%20d='m33.986%2014.193a10.008%2010.008%200%200%200%20-11.986%209.807%202%202%200%200%200%204%200%206%206%200%201%201%208.372%205.514%207.076%207.076%200%200%200%20-4.372%206.44v1.046a2%202%200%200%200%204%200v-1.046a3.045%203.045%200%200%201%201.955-2.766%2010%2010%200%200%200%20-1.969-19z'/%3e%3cpath%20d='m32%2041a2%202%200%200%200%20-2%202v1a2%202%200%200%200%204%200v-1a2%202%200%200%200%20-2-2z'/%3e%3c/svg%3e",cx=ee.img`
+`,pn=({cor:i,legenda:o,src:f,tamanho:c,navegar:m})=>r.jsx(r.Fragment,{children:r.jsxs(nx,{cor:i,to:m,children:[r.jsx(ux,{src:f,tamanho:c}),r.jsx(ix,{children:o})]})}),qp="/DifusaoCultural/assets/saude-7ImS2Dk7.png",Hp="/DifusaoCultural/assets/educacao-BNsG8wpj.png",Lp="/DifusaoCultural/assets/bemestar-BrQvk-sp.png",Yp="/DifusaoCultural/assets/assissocial-BfrogoaC.png",Gp="/DifusaoCultural/assets/documentos-C78HTeaz.png",Xp="/DifusaoCultural/assets/orientacao-ccCEYi80.png",rx="data:image/svg+xml,%3csvg%20id='Layer_1'%20enable-background='new%200%200%20512%20512'%20viewBox='0%200%20512%20512'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3clinearGradient%20id='lg1'%3e%3cstop%20offset='0'%20stop-color='%23f8da30'/%3e%3cstop%20offset='1'%20stop-color='%23fdab22'/%3e%3c/linearGradient%3e%3clinearGradient%20id='SVGID_1_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='98.095'%20x2='594.545'%20xlink:href='%23lg1'%20y1='614.19'%20y2='117.74'/%3e%3clinearGradient%20id='SVGID_00000127727518918065102020000017791146191554523274_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='-2.048'%20x2='494.402'%20xlink:href='%23lg1'%20y1='514.037'%20y2='17.597'/%3e%3clinearGradient%20id='SVGID_00000183939817164987541050000001603171435237703323_'%20gradientTransform='matrix(1%200%200%20-1%200%20512)'%20gradientUnits='userSpaceOnUse'%20x1='-102.181'%20x2='394.259'%20xlink:href='%23lg1'%20y1='413.904'%20y2='-82.546'/%3e%3cg%20id='Layer_2_00000139265716193719411640000006018357986890353059_'%3e%3cg%20id='Layer_2_copy_11'%3e%3cg%20id='_62'%3e%3cg%20id='_62-2'%3e%3cpath%20d='m71.2%200h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_1_)'/%3e%3cpath%20d='m71.2%20200.3h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_00000127727518918065102020000017791146191554523274_)'/%3e%3cpath%20d='m71.2%20400.6h369.7c29.2%200%2052.8%2023.6%2052.8%2052.8v5.8c0%2029.2-23.6%2052.8-52.8%2052.8h-369.7c-29.2%200-52.8-23.6-52.8-52.8v-5.8c-.1-29.2%2023.6-52.8%2052.8-52.8z'%20fill='url(%23SVGID_00000183939817164987541050000001603171435237703323_)'/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e",Qp="data:image/svg+xml,%3csvg%20id='outline'%20height='512'%20viewBox='0%200%2064%2064'%20width='512'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='m32%200a30.034%2030.034%200%200%200%20-30%2030%2029.734%2029.734%200%200%200%205.346%2017.1l-5.223%2014.211a2%202%200%200%200%202.567%202.566l16.267-5.977a30%2030%200%201%200%2011.043-57.9zm0%2056a25.824%2025.824%200%200%201%20-10.215-2.086%202%202%200%200%200%20-1.476-.038l-12.94%204.755%204.1-11.153a2%202%200%200%200%20-.278-1.89%2026%2026%200%201%201%2020.809%2010.412z'/%3e%3cpath%20d='m33.986%2014.193a10.008%2010.008%200%200%200%20-11.986%209.807%202%202%200%200%200%204%200%206%206%200%201%201%208.372%205.514%207.076%207.076%200%200%200%20-4.372%206.44v1.046a2%202%200%200%200%204%200v-1.046a3.045%203.045%200%200%201%201.955-2.766%2010%2010%200%200%200%20-1.969-19z'/%3e%3cpath%20d='m32%2041a2%202%200%200%200%20-2%202v1a2%202%200%200%200%204%200v-1a2%202%200%200%200%20-2-2z'/%3e%3c/svg%3e",ox=ee.img`
     width: clamp(24px, 4vw, 40px);
     height: auto;
 
     margin: auto 0 auto 40px;  /* centraliza verticalmente e dá um espacinho à esquerda */
     cursor: pointer;
     display: block;
-`,sx=ee.div`
+`,cx=ee.div`
     background-color: #DCF4CE;
     width: 100%;
     min-height: 6rem;
@@ -191,7 +187,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     @media (max-width: 768px) {
         padding: 0 8px;
     }
-`,fx=ee.div`
+`,sx=ee.div`
     background-color: #DCF4CE;
 
     position: absolute;    /* agora relativo ao Div */
@@ -219,7 +215,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     margin-right: auto;  
     font-size: 150%;
     
-`;const dx=ee.ul`
+`;const fx=ee.ul`
     color: black;
     margin: auto;
     width: 100%;
@@ -261,8 +257,9 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-`;const mx=ee.a`
+`;const dx=ee.a`
     justify-self: end;
+    width: 50%;
     margin-right: 16px;
     display: flex;
     align-items: center;       
@@ -272,7 +269,11 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     color: #264790;
 
     white-space: nowrap; 
-`,hx=()=>{const[i,o]=N.useState(!1),f=()=>{o(!i)};return r.jsx(r.Fragment,{children:r.jsxs(sx,{children:[r.jsxs("div",{style:{display:"grid",gridTemplateColumns:"11% 80%"},children:[r.jsx(cx,{src:ox,onClick:f}),r.jsx(Py,{children:"Informações e ajuda"})]}),r.jsxs(mx,{href:"/duvidas",children:[r.jsx(Iy,{children:"Dúvidas Frequentes"}),r.jsx(Wy,{src:Qp})]}),r.jsx(fx,{menuAberto:i,children:r.jsxs(dx,{children:[r.jsx(gn,{onClick:()=>window.open("/saude","_self"),children:"Saúde"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/saude#saude1",children:r.jsx(Re,{children:"Onde buscar atendimento?"})}),r.jsx(_e,{href:"/saude#saude2",children:r.jsx(Re,{children:"Como ser atendido?"})}),r.jsx(_e,{href:"/saude#saude3",children:r.jsx(Re,{children:"Serviços e tratamentos oferecidos."})}),r.jsx(_e,{href:"/saude#saude4",children:r.jsx(Re,{children:"Telefones e links úteis."})})]}),r.jsx(gn,{onClick:()=>window.open("/educa","_self"),children:"Educação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/educa#educa1",children:r.jsx(Re,{children:"Como aprender português."})}),r.jsx(_e,{href:"/educa#educa2",children:r.jsx(Re,{children:"Educação infantil, fundamental e média."})}),r.jsx(_e,{href:"/educa#educa3",children:r.jsx(Re,{children:"Documentos necessários para realização de matrícula escolar."})}),r.jsx(_e,{href:"/educa#educa4",children:r.jsx(Re,{children:"Educação para jovens e adultos - EJA."})}),r.jsx(_e,{href:"/educa#educa5",children:r.jsx(Re,{children:"Revalidação de diplomas estrangeiros."})})]}),r.jsx(gn,{onClick:()=>window.open("/naturaliza","_self"),children:"Naturalização"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/naturaliza#naturaliza1",children:r.jsx(Re,{children:"Naturalização ordinária."})}),r.jsx(_e,{href:"/naturaliza#naturaliza2",children:r.jsx(Re,{children:"Hipóteses de redução de prazo na naturalização ordinária."})}),r.jsx(_e,{href:"/naturaliza#naturaliza3",children:r.jsx(Re,{children:"Naturalização extraordinária, especial, provisória e naturalização definitiva."})}),r.jsx(_e,{href:"/naturaliza#naturaliza4",children:r.jsx(Re,{children:"Como solicitar a naturalização."})}),r.jsx(_e,{href:"/naturaliza#naturaliza5",children:r.jsx(Re,{children:"Documentos mais solicitados."})}),r.jsx(_e,{href:"/naturaliza#naturaliza6",children:r.jsx(Re,{children:"Regularização migratória."})})]}),r.jsx(gn,{onClick:()=>window.open("/assistencia","_self"),children:"Assistência Social"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/assistencia#assistencia1",children:r.jsx(Re,{children:"Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS)."})}),r.jsx(_e,{href:"/assistencia#assistencia2",children:r.jsx(Re,{children:"Rede de Acolhimento."})}),r.jsx(_e,{href:"/assistencia#assistencia3",children:r.jsx(Re,{children:"Programas sociais do governo."})}),r.jsx(_e,{href:"/assistencia#assistencia4",children:r.jsx(Re,{children:"Pessoas em situação de rua."})})]}),r.jsx(gn,{onClick:()=>window.open("/documentos","_self"),children:"Documentação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/documentos#documentos1",children:r.jsx(Re,{children:"Registro nacional de estrangeiros (RNE)."})}),r.jsx(_e,{href:"/documentos#documentos2",children:r.jsx(Re,{children:"Carteira de registro nacional migratório (CRNM)."})}),r.jsx(_e,{href:"/documentos#documentos3",children:r.jsx(Re,{children:"Documento provisório de registro nacional migratório - DPRNM."})}),r.jsx(_e,{href:"/documentos#documentos4",children:r.jsx(Re,{children:"Protocolo de Solicitação de Refúgio."})})]}),r.jsx(gn,{onClick:()=>window.open("/orienta","_self"),children:"Ajuda e orientação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/orienta#orienta1",children:r.jsx(Re,{children:"SJMR (Serviço Jesuíta a Migrantes e Refugiados)."})}),r.jsx(_e,{href:"/orienta#orienta2",children:r.jsx(Re,{children:"Missão paz."})}),r.jsx(_e,{href:"/orienta#orienta3",children:r.jsx(Re,{children:"ACNUR."})}),r.jsx(_e,{href:"/orienta#orienta4",children:r.jsx(Re,{children:"Abraço cultural."})}),r.jsx(_e,{href:"/orienta#orienta5",children:r.jsx(Re,{children:"Defensoria Pública da DPU."})}),r.jsx(_e,{href:"/orienta#orienta5",children:r.jsx(Re,{children:"Organização Internacional para as Migrações."})})]})]})})]})})},px=()=>r.jsxs(Fy,{children:[r.jsx($y,{children:r.jsx(hx,{})}),r.jsx(nx,{}),r.jsx(ex,{children:"Aqui você encontra informações sobre:"}),r.jsxs(tx,{children:[r.jsx(pn,{legenda:"Saúde",src:qp,tamanho:"6.8vw",navegar:"/saude"}),r.jsx(pn,{cor:"#99E17A",legenda:"Educação",src:Hp,tamanho:"6.8vw",navegar:"/educa"}),r.jsx(pn,{legenda:"Naturalização",src:Lp,tamanho:"6.8vw",navegar:"/naturaliza"}),r.jsx(pn,{cor:"#99E17A",legenda:"Assistência Social",src:Yp,tamanho:"6.8vw",navegar:"/assistencia"}),r.jsx(pn,{legenda:"Documentação",src:Gp,tamanho:"6.8vw",navegar:"/documentos"}),r.jsx(pn,{cor:"#99E17A",legenda:"Ajuda e orientação",src:Xp,tamanho:"6.8vw",navegar:"/orienta"})]})]}),gx=ee.div`
+`,mx=ee.img`
+    width: 15%;
+    padding: 20px;
+    margin: auto;
+`,hx=()=>{const[i,o]=N.useState(!1),f=()=>{o(!i)};return r.jsx(r.Fragment,{children:r.jsxs(cx,{children:[r.jsxs("div",{style:{display:"grid",gridTemplateColumns:"16% 80%"},children:[r.jsx(ox,{src:rx,onClick:f}),r.jsx(Wy,{children:"Informações e ajuda"})]}),r.jsxs(dx,{href:"/duvidas",children:[r.jsx(Py,{children:"Dúvidas Frequentes"}),r.jsx(mx,{src:Qp})]}),r.jsx(sx,{menuAberto:i,children:r.jsxs(fx,{children:[r.jsx(gn,{onClick:()=>window.open("/saude","_self"),children:"Saúde"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/saude#saude1",children:r.jsx(Re,{children:"Onde buscar atendimento?"})}),r.jsx(_e,{href:"/saude#saude2",children:r.jsx(Re,{children:"Como ser atendido?"})}),r.jsx(_e,{href:"/saude#saude3",children:r.jsx(Re,{children:"Serviços e tratamentos oferecidos."})}),r.jsx(_e,{href:"/saude#saude4",children:r.jsx(Re,{children:"Telefones e links úteis."})})]}),r.jsx(gn,{onClick:()=>window.open("/educa","_self"),children:"Educação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/educa#educa1",children:r.jsx(Re,{children:"Como aprender português."})}),r.jsx(_e,{href:"/educa#educa2",children:r.jsx(Re,{children:"Educação infantil, fundamental e média."})}),r.jsx(_e,{href:"/educa#educa3",children:r.jsx(Re,{children:"Documentos necessários para realização de matrícula escolar."})}),r.jsx(_e,{href:"/educa#educa4",children:r.jsx(Re,{children:"Educação para jovens e adultos - EJA."})}),r.jsx(_e,{href:"/educa#educa5",children:r.jsx(Re,{children:"Revalidação de diplomas estrangeiros."})})]}),r.jsx(gn,{onClick:()=>window.open("/naturaliza","_self"),children:"Naturalização"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/naturaliza#naturaliza1",children:r.jsx(Re,{children:"Naturalização ordinária."})}),r.jsx(_e,{href:"/naturaliza#naturaliza2",children:r.jsx(Re,{children:"Hipóteses de redução de prazo na naturalização ordinária."})}),r.jsx(_e,{href:"/naturaliza#naturaliza3",children:r.jsx(Re,{children:"Naturalização extraordinária, especial, provisória e naturalização definitiva."})}),r.jsx(_e,{href:"/naturaliza#naturaliza4",children:r.jsx(Re,{children:"Como solicitar a naturalização."})}),r.jsx(_e,{href:"/naturaliza#naturaliza5",children:r.jsx(Re,{children:"Documentos mais solicitados."})}),r.jsx(_e,{href:"/naturaliza#naturaliza6",children:r.jsx(Re,{children:"Regularização migratória."})})]}),r.jsx(gn,{onClick:()=>window.open("/assistencia","_self"),children:"Assistência Social"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/assistencia#assistencia1",children:r.jsx(Re,{children:"Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS)."})}),r.jsx(_e,{href:"/assistencia#assistencia2",children:r.jsx(Re,{children:"Rede de Acolhimento."})}),r.jsx(_e,{href:"/assistencia#assistencia3",children:r.jsx(Re,{children:"Programas sociais do governo."})}),r.jsx(_e,{href:"/assistencia#assistencia4",children:r.jsx(Re,{children:"Pessoas em situação de rua."})})]}),r.jsx(gn,{onClick:()=>window.open("/documentos","_self"),children:"Documentação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/documentos#documentos1",children:r.jsx(Re,{children:"Registro nacional de estrangeiros (RNE)."})}),r.jsx(_e,{href:"/documentos#documentos2",children:r.jsx(Re,{children:"Carteira de registro nacional migratório (CRNM)."})}),r.jsx(_e,{href:"/documentos#documentos3",children:r.jsx(Re,{children:"Documento provisório de registro nacional migratório - DPRNM."})}),r.jsx(_e,{href:"/documentos#documentos4",children:r.jsx(Re,{children:"Protocolo de Solicitação de Refúgio."})})]}),r.jsx(gn,{onClick:()=>window.open("/orienta","_self"),children:"Ajuda e orientação"}),r.jsxs("ul",{children:[r.jsx(_e,{href:"/orienta#orienta1",children:r.jsx(Re,{children:"SJMR (Serviço Jesuíta a Migrantes e Refugiados)."})}),r.jsx(_e,{href:"/orienta#orienta2",children:r.jsx(Re,{children:"Missão paz."})}),r.jsx(_e,{href:"/orienta#orienta3",children:r.jsx(Re,{children:"ACNUR."})}),r.jsx(_e,{href:"/orienta#orienta4",children:r.jsx(Re,{children:"Abraço cultural."})}),r.jsx(_e,{href:"/orienta#orienta5",children:r.jsx(Re,{children:"Defensoria Pública da DPU."})}),r.jsx(_e,{href:"/orienta#orienta5",children:r.jsx(Re,{children:"Organização Internacional para as Migrações."})})]})]})})]})})},px=()=>r.jsxs(Fy,{children:[r.jsx($y,{children:r.jsx(hx,{})}),r.jsx(lx,{}),r.jsx(Iy,{children:"Aqui você encontra informações sobre:"}),r.jsxs(ex,{children:[r.jsx(pn,{legenda:"Saúde",src:qp,tamanho:"6.8vw",navegar:"/saude"}),r.jsx(pn,{cor:"#99E17A",legenda:"Educação",src:Hp,tamanho:"6.8vw",navegar:"/educa"}),r.jsx(pn,{legenda:"Naturalização",src:Lp,tamanho:"6.8vw",navegar:"/naturaliza"}),r.jsx(pn,{cor:"#99E17A",legenda:"Assistência Social",src:Yp,tamanho:"6.8vw",navegar:"/assistencia"}),r.jsx(pn,{legenda:"Documentação",src:Gp,tamanho:"6.8vw",navegar:"/documentos"}),r.jsx(pn,{cor:"#99E17A",legenda:"Ajuda e orientação",src:Xp,tamanho:"6.8vw",navegar:"/orienta"})]})]}),gx=ee.div`
     display: grid;
     grid-template-columns: repeat(7,1fr);
     width: 99.1vw;
