@@ -5,6 +5,7 @@ import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoLink,
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import { useEffect } from "react";
 
+
 const TelaSaude: React.FC = () => {
 
     useEffect(() => {

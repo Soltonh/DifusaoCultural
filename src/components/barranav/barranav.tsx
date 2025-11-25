@@ -1,77 +1,58 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "../../assets/menu_12483685.svg";
-import { DivDuvidas, H2, H3, Imagem } from "../../pages/telaInicial/telaInicial";
+import { H2, H3, Imagem } from "../../pages/telaInicial/telaInicial";
 import IconeDuvidas from "../../assets/duvidas.svg";
 
 export const Img = styled.img`
-    width: 50%;
-    margin: auto;
-    cursor: pointer;
-    
-    @media (max-width: 768px) {
-        width: 80%;
-        margin: auto;
-    }
+    width: clamp(24px, 4vw, 40px);
+    height: auto;
 
-    @media (max-width: 480px) {
-        width: 100%;
-        margin: auto;
-    }
+    margin: auto 0 auto 40px;  /* centraliza verticalmente e dá um espacinho à esquerda */
+    cursor: pointer;
+    display: block;
 `
 
 export const Div = styled.div`
-    width: 99vw;
-    height: 7vh;
+    background-color: #DCF4CE;
+    width: 100%;
+    min-height: 6rem;
+    max-height: 6rem;
     display: grid;
-    grid-template-columns: 6vw 65vw 25vw;
+    grid-template-columns: auto auto;
+    align-items: center;
+
     position: sticky;
     top: 0;
-    z-index:999;
-    box-shadow: white;
-    gap: 20px;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
     @media (max-width: 768px) {
-        height: 10vh;
-    }
-
-    @media (max-width: 480px) {
-    padding: 0.5rem;
+        padding: 0 8px;
     }
 `
 export const Div2 = styled.div<{ menuAberto: boolean }>`
+    background-color: #DCF4CE;
+
+    position: absolute;    /* agora relativo ao Div */
+    top: 100%;             /* começa logo abaixo do Div */
+    left: 0;
+
+    width: 100%;
+    max-width: 850px;
+    max-height: 89.6vh;
+
     overflow-x: hidden;
-    width: 40vw;
-    height: 89.2vh;
-    overflow-y: scroll;
-    background-color:#264790 ;
-    position: sticky;
-    top: 0;
-    z-index: 9999;
-    transition: transform 1s ease;
-    transform: ${({ menuAberto }) => 
-    menuAberto ? "translateX(0)" : "translateX(-100%)"};
-    margin-top: -1rem;
-
-    @media (max-width: 1200px) {
-        width: 17vw;
-        margin-top: 4.6%;
-    }
-
-    @media (max-width: 1024px) {
-        width: 17vw;
-        margin-top: 5.4%;
-    }
-    
-    @media (max-width: 768px) {
-        width: 25vw;
-        margin-top: 10.3%;
-    }
+    transition: transform 0.3s ease;
+    transform: ${({ menuAberto }) =>
+        menuAberto ? "translateX(0)" : "translateX(-100%)"};
+    z-index: 998;          /* fica abaixo da barra, mas acima do conteúdo */
 
     @media (max-width: 480px) {
-        width: 40vw;
-        margin-top: 16.4%;
+        width: 100vw;
+        max-width: 100vw;
     }
+
 `
 
 export const H1 = styled.h1`
@@ -83,12 +64,14 @@ export const H1 = styled.h1`
     
 `
 export const UlPrincipal = styled.ul`
+    color: black;
     margin: auto;
     width: 100%;
     list-style-type: none;
     margin-left: 2%;    
 `
 export const LiPrincipal = styled.li`
+    width: 90%;  
     font-size: 25px;
     font-weight: bold;
     margin: 1rem;
@@ -102,6 +85,7 @@ export const LiPrincipal = styled.li`
 `
 
 export const LiSecund = styled.li`
+    color:black;
     font-size: 18px;
     font-weight: bold;
     margin-left: 5%;
@@ -109,9 +93,7 @@ export const LiSecund = styled.li`
     cursor: pointer;
     padding-left: 6px;
     border-radius: 10px 0px 10px 0px;
-    width: 35vw;
-    color: black;
-
+    width: 90%;  
     &:hover{
         background-color: white;
         color: black;
@@ -119,12 +101,30 @@ export const LiSecund = styled.li`
 `
 
 export const Abarra = styled.a`
-    color: white;
-
+    
     &:hover{
         background-color: white;
         color: black;
     }
+`
+
+export const IconeDuvida = styled.svg`
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+`
+
+export const DivDuvidas = styled.a`
+    justify-self: end;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;       
+    gap: 8px; 
+    
+    text-decoration: none;
+    color: #264790;
+
+    white-space: nowrap; 
 `
 
 const BarraNav: React.FC = () => {
@@ -139,9 +139,11 @@ const BarraNav: React.FC = () => {
 
     return(
         <>
-            <Div>
-                <Img src={MenuIcon} onClick={toggleMenu}></Img>
-                <H2>Informações e ajuda</H2>
+            <Div>  
+                <div style={{display: "grid", gridTemplateColumns:"11% 80%"}}>
+                    <Img src={MenuIcon} onClick={toggleMenu}></Img>
+                    <H2>Informações e ajuda</H2>
+                </div>
                 <DivDuvidas href="/duvidas">
                     <H3>Dúvidas Frequentes</H3>
                     <Imagem src={IconeDuvidas}/>
@@ -150,50 +152,50 @@ const BarraNav: React.FC = () => {
                     <UlPrincipal>
                         <LiPrincipal onClick={() => window.open('/saude', '_self')}>Saúde</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/saude#saude1">Onde buscar atendimento?</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/saude#saude2">Como ser atendido?</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/saude#saude3">Serviços e tratamentos oferecidos.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/saude#saude4">Telefones e links úteis.</Abarra></LiSecund>
+                                <Abarra href="/saude#saude1"><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
+                                <Abarra href="/saude#saude2"><LiSecund>Como ser atendido?</LiSecund></Abarra>
+                                <Abarra href="/saude#saude3"><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
+                                <Abarra href="/saude#saude4"><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/educa', '_self')}>Educação</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/educa#educa1">Como aprender português.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/educa#educa2">Educação infantil, fundamental e média.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/educa#educa3">Documentos necessários para realização de matrícula escolar.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/educa#educa4">Educação para jovens e adultos - EJA.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/educa#educa5">Revalidação de diplomas estrangeiros.</Abarra></LiSecund>
+                                <Abarra href="/educa#educa1"><LiSecund>Como aprender português.</LiSecund></Abarra>
+                                <Abarra href="/educa#educa2"><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
+                                <Abarra href="/educa#educa3"><LiSecund>Documentos necessários para realização de matrícula escolar.</LiSecund></Abarra>
+                                <Abarra href="/educa#educa4"><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
+                                <Abarra href="/educa#educa5"><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/naturaliza', '_self')}>Naturalização</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza1">Naturalização ordinária.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza2">Hipóteses de redução de prazo na naturalização ordinária.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza3">Naturalização extraordinária, especial, provisória e naturalização definitiva.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza4">Como solicitar a naturalização.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza5">Documentos mais solicitados.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/naturaliza#naturaliza6">Regularização migratória.</Abarra></LiSecund>
+                                <Abarra href="/naturaliza#naturaliza1"><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra href="/naturaliza#naturaliza2"><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra href="/naturaliza#naturaliza3"><LiSecund>Naturalização extraordinária, especial, provisória e naturalização definitiva.</LiSecund></Abarra>
+                                <Abarra href="/naturaliza#naturaliza4"><LiSecund>Como solicitar a naturalização.</LiSecund></Abarra>
+                                <Abarra href="/naturaliza#naturaliza5"><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
+                                <Abarra href="/naturaliza#naturaliza6"><LiSecund>Regularização migratória.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/assistencia', '_self')}>Assistência Social</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/assistencia#assistencia1">Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/assistencia#assistencia2">Rede de Acolhimento.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/assistencia#assistencia3">Programas sociais do governo.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/assistencia#assistencia4">Pessoas em situação de rua.</Abarra></LiSecund>
+                                <Abarra href="/assistencia#assistencia1"><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
+                                <Abarra href="/assistencia#assistencia2"><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
+                                <Abarra href="/assistencia#assistencia3"><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
+                                <Abarra href="/assistencia#assistencia4"><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/documentos', '_self')}>Documentação</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/documentos#documentos1">Registro nacional de estrangeiros (RNE).</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/documentos#documentos2">Carteira de registro nacional migratório (CRNM).</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/documentos#documentos3">Documento provisório de registro nacional migratório - DPRNM.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/documentos#documentos4">Protocolo de Solicitação de Refúgio.</Abarra></LiSecund>
+                                <Abarra href="/documentos#documentos1"><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
+                                <Abarra href="/documentos#documentos2"><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
+                                <Abarra href="/documentos#documentos3"><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
+                                <Abarra href="/documentos#documentos4"><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/orienta', '_self')}>Ajuda e orientação</LiPrincipal>
                             <ul>
-                                <LiSecund><Abarra href="/orienta#orienta1">SJMR (Serviço Jesuíta a Migrantes e Refugiados).</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/orienta#orienta2">Missão paz.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/orienta#orienta3">ACNUR.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/orienta#orienta4">Abraço cultural.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/orienta#orienta5">Defensoria Pública da DPU.</Abarra></LiSecund>
-                                <LiSecund><Abarra href="/orienta#orienta5">Organização Internacional para as Migrações.</Abarra></LiSecund>
+                                <Abarra href="/orienta#orienta1"><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
+                                <Abarra href="/orienta#orienta2"><LiSecund>Missão paz.</LiSecund></Abarra>
+                                <Abarra href="/orienta#orienta3"><LiSecund>ACNUR.</LiSecund></Abarra>
+                                <Abarra href="/orienta#orienta4"><LiSecund>Abraço cultural.</LiSecund></Abarra>
+                                <Abarra href="/orienta#orienta5"><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
+                                <Abarra href="/orienta#orienta5"><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
                             </ul>
                     </UlPrincipal>   
                 </Div2>
