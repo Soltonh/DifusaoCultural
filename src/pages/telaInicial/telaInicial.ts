@@ -14,11 +14,6 @@ export const NavBar = styled.div`
     grid-template-columns: repeat(1,1fr);
 `
 
-export const Imagem = styled.img`
-    width: 100%;
-    padding: 20px;
-    margin: auto;
-`
 
 export const H2 = styled.h2`
     color: #264790;

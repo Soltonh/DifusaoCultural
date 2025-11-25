@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import MenuIcon from "../../assets/menu_12483685.svg";
-import { H2, H3, Imagem } from "../../pages/telaInicial/telaInicial";
+import { H2, H3 } from "../../pages/telaInicial/telaInicial";
 import IconeDuvidas from "../../assets/duvidas.svg";
 
 export const Img = styled.img`
@@ -116,6 +116,7 @@ export const IconeDuvida = styled.svg`
 
 export const DivDuvidas = styled.a`
     justify-self: end;
+    width: 50%;
     margin-right: 16px;
     display: flex;
     align-items: center;       
@@ -127,6 +128,12 @@ export const DivDuvidas = styled.a`
     white-space: nowrap; 
 `
 
+
+export const Imagem = styled.img`
+    width: 15%;
+    padding: 20px;
+    margin: auto;
+`
 const BarraNav: React.FC = () => {
 
 
@@ -140,24 +147,24 @@ const BarraNav: React.FC = () => {
     return(
         <>
             <Div>  
-                <div style={{display: "grid", gridTemplateColumns:"11% 80%"}}>
+                <div style={{display: "grid", gridTemplateColumns:"16% 80%"}}>
                     <Img src={MenuIcon} onClick={toggleMenu}></Img>
                     <H2>Informações e ajuda</H2>
                 </div>
-                <DivDuvidas href="/duvidas">
+                <DivDuvidas href="/DifusaoCultural/duvidas">
                     <H3>Dúvidas Frequentes</H3>
                     <Imagem src={IconeDuvidas}/>
                 </DivDuvidas>
                 <Div2 menuAberto={menuAberto}>    
                     <UlPrincipal>
-                        <LiPrincipal onClick={() => window.open('/saude', '_self')}>Saúde</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/saude', '_self')}>Saúde</LiPrincipal>
                             <ul>
                                 <Abarra href="/saude#saude1"><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
                                 <Abarra href="/saude#saude2"><LiSecund>Como ser atendido?</LiSecund></Abarra>
                                 <Abarra href="/saude#saude3"><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
                                 <Abarra href="/saude#saude4"><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/educa', '_self')}>Educação</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/educa', '_self')}>Educação</LiPrincipal>
                             <ul>
                                 <Abarra href="/educa#educa1"><LiSecund>Como aprender português.</LiSecund></Abarra>
                                 <Abarra href="/educa#educa2"><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
@@ -165,7 +172,7 @@ const BarraNav: React.FC = () => {
                                 <Abarra href="/educa#educa4"><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
                                 <Abarra href="/educa#educa5"><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/naturaliza', '_self')}>Naturalização</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/naturaliza', '_self')}>Naturalização</LiPrincipal>
                             <ul>
                                 <Abarra href="/naturaliza#naturaliza1"><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
                                 <Abarra href="/naturaliza#naturaliza2"><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
@@ -174,21 +181,21 @@ const BarraNav: React.FC = () => {
                                 <Abarra href="/naturaliza#naturaliza5"><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
                                 <Abarra href="/naturaliza#naturaliza6"><LiSecund>Regularização migratória.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/assistencia', '_self')}>Assistência Social</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/assistencia', '_self')}>Assistência Social</LiPrincipal>
                             <ul>
                                 <Abarra href="/assistencia#assistencia1"><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
                                 <Abarra href="/assistencia#assistencia2"><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
                                 <Abarra href="/assistencia#assistencia3"><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
                                 <Abarra href="/assistencia#assistencia4"><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/documentos', '_self')}>Documentação</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/documentos', '_self')}>Documentação</LiPrincipal>
                             <ul>
                                 <Abarra href="/documentos#documentos1"><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
                                 <Abarra href="/documentos#documentos2"><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
                                 <Abarra href="/documentos#documentos3"><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
                                 <Abarra href="/documentos#documentos4"><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/orienta', '_self')}>Ajuda e orientação</LiPrincipal>
+                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/orienta', '_self')}>Ajuda e orientação</LiPrincipal>
                             <ul>
                                 <Abarra href="/orienta#orienta1"><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
                                 <Abarra href="/orienta#orienta2"><LiSecund>Missão paz.</LiSecund></Abarra>

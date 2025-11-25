@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <GlobalStyle/>
-        <BrowserRouter>
+        <BrowserRouter basename="/DifusaoCultural">
           <Routes>
-            <Route path="/" element={<TelaInicial/>} />
+            <Route index element={<TelaInicial/>} />
             <Route path="/saude" element={<TelaSaude/>} />
             <Route path="/educa" element={<TelaEduca/>} />
             <Route path="/naturaliza" element={<TelaNaturaliza/>} />
