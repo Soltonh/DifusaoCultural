@@ -27,8 +27,11 @@ export const Div = styled.div`
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         grid-template-columns: 50% 30%;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 50% 15%;
     }
 `
 export const Div2 = styled.div<{ menuAberto: boolean }>`
@@ -128,6 +131,10 @@ export const DivDuvidas = styled.a`
     color: #264790;
 
     white-space: nowrap; 
+
+    @media (max-width: 500px) {
+        grid-template-columns: 60% 20%;
+    }
 `
 
 
@@ -173,7 +180,7 @@ const BarraNav: React.FC = () => {
                     <Img src={MenuIcon} onClick={toggleMenu}></Img>
                     <H2>Informações e ajuda</H2>
                 </DivMenu>
-                <DivDuvidas href="/DifusaoCultural/duvidas">
+                <DivDuvidas onClick={() => window.open('/DifusaoCultural/duvidas', '_self')}>
                     <H3>Dúvidas Frequentes</H3>
                     <Imagem src={IconeDuvidas}/>
                 </DivDuvidas>

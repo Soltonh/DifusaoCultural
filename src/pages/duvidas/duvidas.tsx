@@ -4,9 +4,28 @@ import { DivTextos, H2, ParagrafoConteudoTexto } from "../saude/saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import IconeDuvidas from "../../assets/duvidas.svg";
 import { TextoLink } from "../naturaliza/naturaliza";
+import { useEffect } from "react";
 
 const TelaDuvidas: React.FC = () => {
 
+    useEffect(() => {
+                const scrollToHash = () => {
+                const hash = window.location.hash;
+                if (!hash) return;
+        
+                const id = hash.slice(1); // tira o "#"
+                const el = document.getElementById(id);
+        
+                if (el) {
+                    el.scrollIntoView({ behavior: "smooth", block: "start" });
+                }
+                };
+                setTimeout(scrollToHash, 0);
+                
+                window.addEventListener("hashchange", scrollToHash);
+                return () => window.removeEventListener("hashchange", scrollToHash);
+        }, []);
+        
     return (
         <>  
             <IndicadoPag src={IconeDuvidas} tamanho="5vw" titulo="Dúvidas Frequentes"/>
