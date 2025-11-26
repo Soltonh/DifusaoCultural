@@ -15,6 +15,7 @@ export const ParagrafoConteudo = styled.li`
     font-size: 1.8rem;
     color: black;
     padding-bottom: 0.7rem;
+    margin-left: 3rem;
     font-weight: normal;
 `;
 

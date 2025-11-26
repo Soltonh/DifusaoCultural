@@ -3,41 +3,61 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Fundo = styled.div`
+    overflow-x: hidden;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
-    width: 99.1vw;
-    height: 15vh;
+    grid-template-columns: repeat(10,1fr);
+    width: 100vw;
+    min-height: 13vh;
+    max-height: 18vh;
     position: sticky;
-    padding-top: 1.3rem;
-    padding-bottom: 2rem;
+    padding: 1.3rem 1rem 2rem;
     margin-bottom: 3rem;
     background-color: #b3c8f5ff; 
-`
+    gap: clamp(16px, 4vw, 40px);
+    box-sizing: border-box;
 
-export const Icones = styled.svg`
-    width: 70%;
-    color: #264790;
-    margin: auto auto auto 4rem;
-
-    @media (max-width: 1300px) {
-        margin-bottom: 0.5vh;
+    /* tablet */
+    @media (max-width: 980px) {
+        grid-template-columns: repeat(6, 1fr);
     }
 `
 
+export const Icones = styled.svg`
+    width: clamp(16px, 3vw, 28px);
+    height: auto;
+    color: #264790;
+    margin: auto;
+
+`
+
 export const ImagemPag = styled.img<IndicadoPagProps>`
-    width: 100%;
+    width: clamp(40px, 8vw, 70px);  /* cresce/diminui conforme a tela */
+    height: auto;
     filter: grayscale(50%);
     color: #264790;
     margin: auto auto auto 2rem;
+
+    @media (max-width: 600px) {
+        margin: 0 auto; /* centraliza no mobile */
+    }
 `
 
 export const Titulo = styled.h1`
     color: #264790;
     font-size: 3rem;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto auto auto 0;
     text-align: left;
-    grid-column: 2/7;
+    grid-column: 2/10;
+
+    @media (max-width: 980px) {
+        font-size: 2rem;
+        grid-column: 2 / 6;
+    }
+    
+    @media (max-width: 425px) {
+        font-size: 1.5rem;
+    }
+
 `
 
 export const Home = styled(Link)`
@@ -63,7 +83,11 @@ export const Home = styled(Link)`
 
 export const DivIconImg = styled.div`
     display: grid;
-    grid-template-columns: 5vw 4vw;
+    grid-template-columns: auto auto; /* imagem + seta */
+    align-items: center;
+    column-gap: clamp(8px, 2vw, 30px);
+    grid-column: 1 / 2;
+
 `
 interface IndicadoPagProps {
     src?: string;

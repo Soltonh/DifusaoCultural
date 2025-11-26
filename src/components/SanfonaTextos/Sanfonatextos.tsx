@@ -5,19 +5,19 @@ type Item = {id: string, titulo: React.ReactNode; conteudo: React.ReactNode}
 
 
 export const DivGeral = styled.div`
-    display: grid;
-    padding-top: 2rem;
+  display: grid;
+  padding-top: 2rem;
 `;
 
 export const Detalhes = styled.details`
-    border: 1px solid #264790;
-    border-radius: 12px;
-    background: #fff;
-    overflow: hidden;
+  border: 1px solid #264790;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
 
-    &[open] ${''} span[aria-hidden] {
-        transform: rotate(180deg);
-    }
+  &[open] ${''} span[aria-hidden] {
+      transform: rotate(180deg);
+  }
 `
 
 const Summary = styled.summary`
@@ -29,9 +29,9 @@ const Summary = styled.summary`
   padding-right: 2rem;
 
   &:focus-visible {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
-    border-radius: 10px;
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+  border-radius: 10px;
   }
 
   /* esconde o marcador padrão do summary */

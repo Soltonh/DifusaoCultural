@@ -4,32 +4,34 @@ import styled from "styled-components";
 export const DivPrincipal = styled.div`
     border: solid 2px black;
     border-radius: 35px;
-    width: 60vw;
+    min-width: 50vw;
+    max-width: 80vw;
     margin: 5vh auto 5vh auto;
     padding: 10px;
     display: grid;
-    grid-template-columns: 3vw 53vw 3vw;
+    grid-template-columns: repeat(15,1fr);
 `
 
 export const Icones = styled.svg`
-    width: 3vw;
-    height: 3vh;
+    max-width: 100%;
+    min-width: 70%;
     color: black;
     transform: scaleX(-1);
 `
 
 export const InputPesquisar = styled.input`
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    min-width: 100%;
     background-color: white;
     border: none;
     margin: auto;
     color: black;
-    font-size: 20px;
+    font-size: 100%;
+    grid-column: 2 / 15;
     
     &::placeholder{
         color: black;
-        font-size: 20px;
+        font-size: 100%;
     }
 
     &:focus{
@@ -64,7 +66,6 @@ const BarraPesquisa: React.FC = () => {
                 stroke-linejoin="round" 
                 stroke-width="2" 
                 d="M6 18 17.94 6M18 18 6.06 6"/>
-
                 </Icones>
             </DivPrincipal>
         </>

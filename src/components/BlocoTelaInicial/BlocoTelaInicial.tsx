@@ -49,7 +49,7 @@ export const H4Bloco = styled.h4<H4BlocoProps>`
 export const IconeInicial = styled.img<IconeInicialProps>`
     width: ${({ tamanho }) => tamanho || '6.8vw'};
     max-width: 180px;
-    min-width: 48px;
+    min-width: 100px;
 
     height: auto;
     margin: 0 auto;
@@ -58,6 +58,11 @@ export const IconeInicial = styled.img<IconeInicialProps>`
     background-color: #fff;
     border-radius: 35px;
     padding: clamp(10px, 2vw, 22px);
+
+    @media (max-width: 768px){
+        min-width: 70px;
+        border-radius: 25px;
+    }
 `
 
 const BlocoTelaInicial: React.FC<BlocoTelaInicialProps> = ({cor, legenda, src, tamanho, navegar}) => {

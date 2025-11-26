@@ -19,7 +19,7 @@ export const Div = styled.div`
     min-height: 6rem;
     max-height: 6rem;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
 
     position: sticky;
@@ -27,8 +27,8 @@ export const Div = styled.div`
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-    @media (max-width: 768px) {
-        padding: 0 8px;
+    @media (max-width: 700px) {
+        grid-template-columns: 50% 30%;
     }
 `
 export const Div2 = styled.div<{ menuAberto: boolean }>`
@@ -117,7 +117,9 @@ export const IconeDuvida = styled.svg`
 export const DivDuvidas = styled.a`
     justify-self: end;
     width: 50%;
-    margin-right: 16px;
+    margin: auto 0px auto  auto;
+    display: grid;
+    grid-template-columns: 65% 10%;
     display: flex;
     align-items: center;       
     gap: 8px; 
@@ -130,9 +132,29 @@ export const DivDuvidas = styled.a`
 
 
 export const Imagem = styled.img`
-    width: 15%;
+    width: 100%;
+    max-width: 90px;
+    min-width: 60px;
     padding: 20px;
     margin: auto;
+`
+
+export const DivMenu = styled.div`
+    display: grid;
+    grid-template-columns: 13% 80%;
+    
+    @media (max-width: 1366px){
+        grid-template-columns: 18% 80%;
+    }
+    @media (max-width: 980px){
+        grid-template-columns: 22% 80%;
+    }
+    @media (max-width: 768px){
+        grid-template-columns: 30% 80%;
+    }
+    @media (max-width: 425px){
+        grid-template-columns: 44% 40%;
+    }
 `
 const BarraNav: React.FC = () => {
 
@@ -147,10 +169,10 @@ const BarraNav: React.FC = () => {
     return(
         <>
             <Div>  
-                <div style={{display: "grid", gridTemplateColumns:"16% 80%"}}>
+                <DivMenu>
                     <Img src={MenuIcon} onClick={toggleMenu}></Img>
                     <H2>Informações e ajuda</H2>
-                </div>
+                </DivMenu>
                 <DivDuvidas href="/DifusaoCultural/duvidas">
                     <H3>Dúvidas Frequentes</H3>
                     <Imagem src={IconeDuvidas}/>
@@ -159,50 +181,50 @@ const BarraNav: React.FC = () => {
                     <UlPrincipal>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/saude', '_self')}>Saúde</LiPrincipal>
                             <ul>
-                                <Abarra href="/saude#saude1"><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
-                                <Abarra href="/saude#saude2"><LiSecund>Como ser atendido?</LiSecund></Abarra>
-                                <Abarra href="/saude#saude3"><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
-                                <Abarra href="/saude#saude4"><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
+                                <Abarra onClick={() => window.open("/DifusaoCultural/saude#saude1")}><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/saude#saude2"><LiSecund>Como ser atendido?</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/saude#saude3"><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/saude#saude4"><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/educa', '_self')}>Educação</LiPrincipal>
                             <ul>
-                                <Abarra href="/educa#educa1"><LiSecund>Como aprender português.</LiSecund></Abarra>
-                                <Abarra href="/educa#educa2"><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
-                                <Abarra href="/educa#educa3"><LiSecund>Documentos necessários para realização de matrícula escolar.</LiSecund></Abarra>
-                                <Abarra href="/educa#educa4"><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
-                                <Abarra href="/educa#educa5"><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/educa#educa1"><LiSecund>Como aprender português.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/educa#educa2"><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/educa#educa3"><LiSecund>Documentos necessários para realização de matrícula escolar.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/educa#educa4"><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/educa#educa5"><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/naturaliza', '_self')}>Naturalização</LiPrincipal>
                             <ul>
-                                <Abarra href="/naturaliza#naturaliza1"><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
-                                <Abarra href="/naturaliza#naturaliza2"><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
-                                <Abarra href="/naturaliza#naturaliza3"><LiSecund>Naturalização extraordinária, especial, provisória e naturalização definitiva.</LiSecund></Abarra>
-                                <Abarra href="/naturaliza#naturaliza4"><LiSecund>Como solicitar a naturalização.</LiSecund></Abarra>
-                                <Abarra href="/naturaliza#naturaliza5"><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
-                                <Abarra href="/naturaliza#naturaliza6"><LiSecund>Regularização migratória.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza1"><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza2"><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza3"><LiSecund>Naturalização extraordinária, especial, provisória e naturalização definitiva.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza4"><LiSecund>Como solicitar a naturalização.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza5"><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza6"><LiSecund>Regularização migratória.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/assistencia', '_self')}>Assistência Social</LiPrincipal>
                             <ul>
-                                <Abarra href="/assistencia#assistencia1"><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
-                                <Abarra href="/assistencia#assistencia2"><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
-                                <Abarra href="/assistencia#assistencia3"><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
-                                <Abarra href="/assistencia#assistencia4"><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/assistencia#assistencia1"><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/assistencia#assistencia2"><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/assistencia#assistencia3"><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/assistencia#assistencia4"><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/documentos', '_self')}>Documentação</LiPrincipal>
                             <ul>
-                                <Abarra href="/documentos#documentos1"><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
-                                <Abarra href="/documentos#documentos2"><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
-                                <Abarra href="/documentos#documentos3"><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
-                                <Abarra href="/documentos#documentos4"><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/documentos#documentos1"><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/documentos#documentos2"><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/documentos#documentos3"><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/documentos#documentos4"><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
                             </ul>
                         <LiPrincipal onClick={() => window.open('/DifusaoCultural/orienta', '_self')}>Ajuda e orientação</LiPrincipal>
                             <ul>
-                                <Abarra href="/orienta#orienta1"><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
-                                <Abarra href="/orienta#orienta2"><LiSecund>Missão paz.</LiSecund></Abarra>
-                                <Abarra href="/orienta#orienta3"><LiSecund>ACNUR.</LiSecund></Abarra>
-                                <Abarra href="/orienta#orienta4"><LiSecund>Abraço cultural.</LiSecund></Abarra>
-                                <Abarra href="/orienta#orienta5"><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
-                                <Abarra href="/orienta#orienta5"><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta1"><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta2"><LiSecund>Missão paz.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta3"><LiSecund>ACNUR.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta4"><LiSecund>Abraço cultural.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta5"><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
+                                <Abarra href="/DifusaoCultural/orienta#orienta5"><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
                             </ul>
                     </UlPrincipal>   
                 </Div2>

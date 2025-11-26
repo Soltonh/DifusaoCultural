@@ -1,7 +1,7 @@
 import type React from "react";
 import educaimg from "../../assets/bemestar.png";
 import IndicadoPag from "../../components/IndicadorPag/IndicadorPag"
-import { DivTextos, H2, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } from "../saude/saude";
+import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } from "../saude/saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import {TabelaCentral, TextoLink} from "./naturaliza"
 import { useEffect } from "react";
@@ -196,6 +196,82 @@ const TelaNaturaliza: React.FC = () => {
                         conteudo: 
                         (
                             <>
+                                <H3>Solicitação Digital do Pedido</H3>
+                                <ol type="a">
+                                    <ParagrafoConteudo>Acesse o Sistema Naturalizar-se por meio de um dos links:</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "disc"}}>
+                                        <ParagrafoConteudo><TextoLink href="https://www.gov.br/pt-br/servicos/solicitar-naturalizacao" target="_blank">https://www.gov.br/pt-br/servicos/solicitar-naturalizacao</TextoLink></ParagrafoConteudo>
+                                        <ParagrafoConteudo><TextoLink href="https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c508ba81f" target="_blank">https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c508ba81f</TextoLink></ParagrafoConteudo>
+                                    </ul>
+                                    <ParagrafoConteudoTexto>
+                                        É necessário ter uma conta no gov.br para ter acesso ao formulário. Você deverá inserir seu CPF e sua senha para iniciar o processo.
+                                    </ParagrafoConteudoTexto>
+                                    <ParagrafoConteudo>Preencha o formulário eletrônico.</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Envie todos os documentos exigidos para a modalidade de naturalização correspondente.</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "disc"}}>
+                                        <ParagrafoConteudo>Existem diferentes modalidades (ordinária, extraordinária, provisória e definitiva), cada uma com requisitos específicos.</ParagrafoConteudo>
+                                    </ul>
+                                </ol>
+                                <H3>Agendamento na Polícia Federal</H3>
+                                <ol type="a">
+                                    <ParagrafoConteudo>Após a aprovação preliminar da documentação enviada no sistema, agende o atendimento na unidade da Polícia Federal do seu domicílio.</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Preencha o formulário de agendamento no link:</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "disc"}}>
+                                        <ParagrafoConteudo><TextoLink href="https://servicos.pf.gov.br/agenda-web/formulario/13 " target="_blank">https://servicos.pf.gov.br/agenda-web/formulario/13 </TextoLink></ParagrafoConteudo>
+                                        <ParagrafoConteudo>Caso encontre falhas no sistema ou erros de acesso, envie um e-mail para: naturalizarse@mj.gov.br.</ParagrafoConteudo>
+                                    </ul>
+                                </ol>
+                                <H3>Compareça à Polícia Federal na data e local agendados, levando os documentos originais.</H3>
+                                <ul style={{listStyleType: "disc"}}>
+                                    <ParagrafoConteudo>Para verificar os endereços das delegacias de Polícia Federal acesse o site <TextoLink href="https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem/superintendencias-e-delegacias" target="_blank">https://www.gov.br/pf/pt-br/acesso-a-informacao/institucional/quem-e-quem/superintendencias-e-delegacias</TextoLink></ParagrafoConteudo>
+                                </ul>
+                                <H3>Após o atendimento, acompanhe o andamento do pedido pelo sistema.</H3>
+                                <ul style={{listStyleType: "disc"}}>
+                                    <ParagrafoConteudo><TextoLink href="https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c50912dd0" target="_blank">https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c50912dd0</TextoLink></ParagrafoConteudo>
+                                    <ParagrafoConteudo>Fique atento a eventuais notificações para complementação de documentos.</ParagrafoConteudo>
+                                </ul>
+                                <H3>IMPORTANTE:</H3>
+                                <ul style={{listStyleType: "disc"}}>
+                                    <ParagrafoConteudo>Mantenha seu endereço sempre atualizado e verifique regularmente a caixa de e-mail.</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Para atualizar o endereço, apresente um dos seguintes comprovantes:</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                        <ParagrafoConteudo>Conta recente de água, energia ou telefone;</ParagrafoConteudo>
+                                        <ParagrafoConteudo>Contrato de locação ou escritura de imóvel;</ParagrafoConteudo>
+                                        <ParagrafoConteudo>
+                                            São aceitos comprovantes em nome próprio, dos pais ou do cônjuge/companheiro, desde que seja comprovado o vínculo 
+                                            com documentos oficiais (certidão de nascimento, casamento ou união estável).
+                                        </ParagrafoConteudo>
+                                    </ul>
+                                </ul>
+                                <H3>Análise pelo Ministério da Justiça.</H3>
+                                <ParagrafoConteudoTexto>
+                                    Após finalização da etapa na Polícia Federal, o processo será encaminhado ao Departamento de Migrações do Ministério da Justiça. O 
+                                    órgão poderá emitir novas notificações solicitando complementações documentais.
+                                </ParagrafoConteudoTexto>
+                                <ul style={{listStyleType: "disc"}}>
+                                    <ParagrafoConteudo>Continue acompanhando o processo pelo sistema:</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                    <ParagrafoConteudo><TextoLink href="https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c50912dd0" target="_blank">https://sso.acesso.gov.br/login?client_id=5b1db4fd-87e7-4689-9c37-faa2a5663c6c&authorization_id=17c50912dd0</TextoLink></ParagrafoConteudo>
+                                    </ul>
+                                </ul>
+                                <H3>Resultado do Pedido.</H3>
+                                <ul style={{listStyleType: "disc"}}>
+                                    <ParagrafoConteudo>A decisão será publicada no Diário Oficial da União: <TextoLink href="https://www.in.gov.br/inicio" target="_blank">https://www.in.gov.br/inicio</TextoLink></ParagrafoConteudo>
+                                    <ParagrafoConteudo>Consulte periodicamente a publicação, buscando pelo seu nome.</ParagrafoConteudo>
+                                    <ParagrafoConteudoTexto>Se o pedido for deferido:</ParagrafoConteudoTexto>
+                                    <ParagrafoConteudo>Solicite o RG (carteira de identidade brasileira) nos órgãos que atendem cidadãos brasileiros, apresentando:</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                        <ParagrafoConteudo>Seus documentos atualizados;</ParagrafoConteudo>
+                                        <ParagrafoConteudo>Cópia da publicação do deferimento.</ParagrafoConteudo>
+                                    </ul>
+                                    <ParagrafoConteudo>Após obter o RG, entregue sua Carteira de Registro Nacional Migratório (CRNM) na unidade da Polícia Federal.</ParagrafoConteudo>
+                                    <ParagrafoConteudoTexto>Se o pedido for indeferido:</ParagrafoConteudoTexto>
+                                    <ParagrafoConteudo>É possível: apresentar recurso no prazo de 10 dias a partir do recebimento da notificação.</ParagrafoConteudo>
+                                    <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                        <ParagrafoConteudo>Solicitar assistência da Defensoria Pública da União (DPU) para interposição do recurso; ou</ParagrafoConteudo>
+                                        <ParagrafoConteudo>Questionar a decisão no Poder Judiciário.</ParagrafoConteudo>
+                                    </ul>
+                                </ul>
                             
                             </>
                         ),
@@ -216,15 +292,84 @@ const TelaNaturaliza: React.FC = () => {
                                 <ParagrafoConteudo>Comprovante de pagamento da taxa (quando aplicável).</ParagrafoConteudo>
                             </>
                         ),
-                        },
-                    ]}
+                    },
+                ]}
                 />
                 <SanfonaTextos
                     items={[
                         {id: "naturaliza6", titulo: (<><H2>Regularização migratória</H2></>), 
-                        conteudo: 
-                        (
-                            <>
+                            conteudo: 
+                            (
+                                <>
+                                <H3>O que é a Autorização de Residência?</H3>
+                                <ParagrafoConteudoTexto>
+                                    A Autorização de Residência (AR) é a permissão concedida à pessoa migrante para viver no Brasil, de forma provisória ou definitiva. 
+                                    Ela pode ser solicitada diretamente em território brasileiro, independentemente da posse de visto prévio e da condição migratória 
+                                    atual da pessoa.
+                                </ParagrafoConteudoTexto>
+                                <ParagrafoConteudoTexto>
+                                    A Autorização de Residência se materializa por meio do Registro Nacional Migratório (RNM), número único de identificação que permitirá a 
+                                    participação da pessoa migrante na vida civil.
+                                </ParagrafoConteudoTexto>
+                                <ParagrafoConteudo>
+                                    O RNM é gerado no momento do pedido de autorização ou registro de residência perante a Polícia Federal. Após a concessão do RNM, será emitida 
+                                    a Carteira de Registro Nacional Migratório (CRNM), documento oficial de identidade do migrante no Brasil.
+                                </ParagrafoConteudo>
+                                <H3>IMPORTANTE:</H3>
+                                <ParagrafoConteudo>
+                                    Visto e Autorização de Residência são permissões diferentes:
+                                </ParagrafoConteudo>
+                                <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                    <ParagrafoConteudo>Visto é a permissão de entrada no país.</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Autorização de Residência é a permissão para permanecer no território brasileiro.</ParagrafoConteudo>
+                                    <ParagrafoConteudo>
+                                        Como regra, a Autorização de Residência somente é concedida quando a pessoa já se encontra no Brasil, exceto na modalidade prévia 
+                                        para visto temporário de trabalho.
+                                    </ParagrafoConteudo>
+                                </ul>
+                                <H3>Tipos de Autorização de Residência</H3>
+                                <ParagrafoConteudoTexto>
+                                    As autorizações de residência podem ser:
+                                </ParagrafoConteudoTexto>
+                                <ParagrafoConteudo>
+                                    Por tempo determinado (temporárias): quando têm finalidade que possui previsão de término, como tratamento de saúde ou estudo. Podem 
+                                    ser renovadas diversas vezes.
+                                </ParagrafoConteudo>
+                                <ParagrafoConteudo>
+                                    Por tempo indeterminado (permanentes): quando decorrem da própria natureza da proteção conferida, como nos casos de:
+                                </ParagrafoConteudo>
+                                <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                    <ParagrafoConteudo>Refúgio;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Vítimas de trabalho escravo;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Acolhida humanitária;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Reunião familiar;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Entre outras.</ParagrafoConteudo>
+                                </ul>
+                                <H3>Modalidades com Solicitação Presencial</H3>
+                                <ParagrafoConteudoTexto>
+                                    As autorizações mais comuns, como reunião familiar, estudo, tratamento de saúde, acolhida humanitária, cumprimento de pena e acordos 
+                                    bilaterais, devem ser solicitadas presencialmente. Para isso, a pessoa requerente deve:
+                                </ParagrafoConteudoTexto>
+                                <ParagrafoConteudo>Reunir os documentos exigidos para a modalidade específica de Autorização de Residência.</ParagrafoConteudo>
+                                <ParagrafoConteudo>Acessar o Sistema de Registro Nacional Migratório (SISMIGRA), disponível no site da Polícia Federal pela plataforma Gov.br.</ParagrafoConteudo>
+                                <ParagrafoConteudo>Preencher o formulário adequado:</ParagrafoConteudo>
+                                <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                    <ParagrafoConteudo>Registro de residência;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Autorização de residência ou;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Alteração de prazo.</ParagrafoConteudo>
+                                </ul>
+                                <ParagrafoConteudo>Agendar atendimento presencial na unidade da Polícia Federal competente (dependendo da unidade, o agendamento pode ser obrigatório).</ParagrafoConteudo>
+                                <ParagrafoConteudo>Comparecer pessoalmente na data marcada para apresentar o pedido e entregar a documentação.</ParagrafoConteudo>
+                                <ParagrafoConteudoTexto>
+                                    Link para acesso ao serviço de imigração da Polícia Federal: <TextoLink href="https://www.gov.br/pf/pt-br/assuntos/imigracao" target="_blank">https://www.gov.br/pf/pt-br/assuntos/imigracao </TextoLink>
+                                </ParagrafoConteudoTexto>
+                                <H3>Conclusão do Atendimento</H3>
+                                <ParagrafoConteudo>Se toda a documentação estiver correta e completa, a pessoa migrante receberá:</ParagrafoConteudo>
+                                <ul style={{listStyleType: "circle", marginLeft: "3rem"}}>
+                                    <ParagrafoConteudo>O número do RNM;</ParagrafoConteudo>
+                                    <ParagrafoConteudo>Um protocolo provisório de identificação.</ParagrafoConteudo>
+                                </ul>
+                                <ParagrafoConteudo>Após essa etapa, basta aguardar a emissão da CRNM, documento oficial de identidade no Brasil.</ParagrafoConteudo>
                             </>
                         ),
                         },
