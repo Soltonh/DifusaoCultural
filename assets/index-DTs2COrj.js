@@ -80,10 +80,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     min-width: 100vw;
     min-height: 100vh;
 
-     @media (max-width: 780px){
-        min-height: 110vh;
-        min-width: 110vw;
-    }
+    
 `,$y=ee.div`
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -103,6 +100,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     font-weight: 400;
     margin: auto;
     font-size: 2vw;
+    
 `,Iy=ee.h1`
     color: #264790;
     font-size: 30px;
@@ -118,10 +116,8 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin: auto;
-    padding: 40px;
-
+    margin-top: 2rem;
     @media (max-width: 600px){
-        min-width: 100vw;
         grid-template-columns: repeat(2,1fr);
         gap: 10px;
     }
@@ -216,8 +212,11 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         grid-template-columns: 50% 30%;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 50% 15%;
     }
 `,sx=ee.div`
     background-color: #DCF4CE;
@@ -303,6 +302,10 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     color: #264790;
 
     white-space: nowrap; 
+
+    @media (max-width: 500px) {
+        grid-template-columns: 60% 20%;
+    }
 `,mx=ee.img`
     width: 100%;
     max-width: 90px;
