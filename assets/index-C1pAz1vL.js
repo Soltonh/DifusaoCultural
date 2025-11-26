@@ -288,7 +288,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-`;const fx=ee.a`
+`;const fx=ee.div`
     justify-self: end;
     width: 50%;
     margin: auto 0px auto  auto;
