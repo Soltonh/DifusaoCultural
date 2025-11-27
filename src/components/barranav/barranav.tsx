@@ -3,6 +3,7 @@ import styled from "styled-components";
 import MenuIcon from "../../assets/menu_12483685.svg";
 import { H2, H3 } from "../../pages/telaInicial/telaInicial";
 import IconeDuvidas from "../../assets/duvidas.svg";
+import { useNavigate } from "react-router-dom";
 
 export const Img = styled.img`
     width: clamp(24px, 4vw, 40px);
@@ -27,11 +28,24 @@ export const Div = styled.div`
     z-index: 999;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 
-    @media (max-width: 768px) {
+    @media (max-width: 1366px) {
+        grid-template-columns: 60% 30%;
+    }
+
+    @media (max-width: 1200px) {
+        grid-template-columns: 55% 30%;
+    }
+    @media (max-width: 980px) {
         grid-template-columns: 50% 30%;
     }
-    @media (max-width: 500px) {
-        grid-template-columns: 50% 15%;
+    @media (max-width: 700px) {
+        grid-template-columns: 45% 30%;
+    }
+    @media (max-width: 580px) {
+        grid-template-columns: repeat(1,1fr);
+        min-height: 10rem;
+        max-height: 10rem;
+        padding-top: 2rem;
     }
 `
 export const Div2 = styled.div<{ menuAberto: boolean }>`
@@ -135,6 +149,10 @@ export const DivDuvidas = styled.a`
     @media (max-width: 500px) {
         grid-template-columns: 60% 20%;
     }
+
+    @media (max-width: 580px) {
+        margin: auto;
+    }
 `
 
 
@@ -159,15 +177,16 @@ export const DivMenu = styled.div`
     @media (max-width: 768px){
         grid-template-columns: 30% 80%;
     }
-    @media (max-width: 425px){
-        grid-template-columns: 44% 40%;
+    @media (max-width: 580px) {
+        width: 75%;
+        grid-template-columns: 30% 65%;
+        margin: auto;
     }
 `
 const BarraNav: React.FC = () => {
 
-
-    
     const [menuAberto, setMenuAberto] = useState(false);
+    const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuAberto(!menuAberto);
@@ -180,58 +199,58 @@ const BarraNav: React.FC = () => {
                     <Img src={MenuIcon} onClick={toggleMenu}></Img>
                     <H2>Informações e ajuda</H2>
                 </DivMenu>
-                <DivDuvidas onClick={() => window.open('/DifusaoCultural/duvidas', '_self')}>
+                <DivDuvidas onClick={() => navigate("/duvidas")}>
                     <H3>Dúvidas Frequentes</H3>
                     <Imagem src={IconeDuvidas}/>
                 </DivDuvidas>
                 <Div2 menuAberto={menuAberto}>    
                     <UlPrincipal>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/saude', '_self')}>Saúde</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/saude')}>Saúde</LiPrincipal>
                             <ul>
-                                <Abarra onClick={() => window.open("/DifusaoCultural/saude#saude1")}><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/saude#saude2"><LiSecund>Como ser atendido?</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/saude#saude3"><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/saude#saude4"><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/saude#saude1")}><LiSecund>Onde buscar atendimento?</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/saude#saude2")}><LiSecund>Como ser atendido?</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/saude#saude3")}><LiSecund>Serviços e tratamentos oferecidos.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/saude#saude4")}><LiSecund>Telefones e links úteis.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/educa', '_self')}>Educação</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/educa')}>Educação</LiPrincipal>
                             <ul>
-                                <Abarra href="/DifusaoCultural/educa#educa1"><LiSecund>Como aprender português.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/educa#educa2"><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/educa#educa3"><LiSecund>Documentos necessários para realização de matrícula escolar.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/educa#educa4"><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/educa#educa5"><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/educa#educa1")}><LiSecund>Como aprender português.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/educa#educa2")}><LiSecund>Educação infantil, fundamental e média.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/educa#educa3")}><LiSecund>Documentos necessários para realização de matrícula escolar.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/educa#educa4")}><LiSecund>Educação para jovens e adultos - EJA.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/educa#educa5")}><LiSecund>Revalidação de diplomas estrangeiros.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/naturaliza', '_self')}>Naturalização</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/naturaliza')}>Naturalização</LiPrincipal>
                             <ul>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza1"><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza2"><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza3"><LiSecund>Naturalização extraordinária, especial, provisória e naturalização definitiva.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza4"><LiSecund>Como solicitar a naturalização.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza5"><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/naturaliza#naturaliza6"><LiSecund>Regularização migratória.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza1")}><LiSecund>Naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza2")}><LiSecund>Hipóteses de redução de prazo na naturalização ordinária.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza3")}><LiSecund>Naturalização extraordinária, especial, provisória e naturalização definitiva.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza4")}><LiSecund>Como solicitar a naturalização.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza5")}><LiSecund>Documentos mais solicitados.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/naturaliza#naturaliza6")}><LiSecund>Regularização migratória.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/assistencia', '_self')}>Assistência Social</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/assistencia')}>Assistência Social</LiPrincipal>
                             <ul>
-                                <Abarra href="/DifusaoCultural/assistencia#assistencia1"><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/assistencia#assistencia2"><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/assistencia#assistencia3"><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/assistencia#assistencia4"><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/assistencia#assistencia1")}><LiSecund>Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome (MDS).</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/assistencia#assistencia2")}><LiSecund>Rede de Acolhimento.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/assistencia#assistencia3")}><LiSecund>Programas sociais do governo.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/assistencia#assistencia4")}><LiSecund>Pessoas em situação de rua.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/documentos', '_self')}>Documentação</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/documentos')}>Documentação</LiPrincipal>
                             <ul>
-                                <Abarra href="/DifusaoCultural/documentos#documentos1"><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/documentos#documentos2"><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/documentos#documentos3"><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/documentos#documentos4"><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/documentos#documentos1")}><LiSecund>Registro nacional de estrangeiros (RNE).</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/documentos#documentos2")}><LiSecund>Carteira de registro nacional migratório (CRNM).</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/documentos#documentos3")}><LiSecund>Documento provisório de registro nacional migratório - DPRNM.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/documentos#documentos4")}><LiSecund>Protocolo de Solicitação de Refúgio.</LiSecund></Abarra>
                             </ul>
-                        <LiPrincipal onClick={() => window.open('/DifusaoCultural/orienta', '_self')}>Ajuda e orientação</LiPrincipal>
+                        <LiPrincipal onClick={() => navigate('/orienta')}>Ajuda e orientação</LiPrincipal>
                             <ul>
-                                <Abarra href="/DifusaoCultural/orienta#orienta1"><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/orienta#orienta2"><LiSecund>Missão paz.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/orienta#orienta3"><LiSecund>ACNUR.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/orienta#orienta4"><LiSecund>Abraço cultural.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/orienta#orienta5"><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
-                                <Abarra href="/DifusaoCultural/orienta#orienta5"><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta1")}><LiSecund>SJMR (Serviço Jesuíta a Migrantes e Refugiados).</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta2")}><LiSecund>Missão paz.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta3")}><LiSecund>ACNUR.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta4")}><LiSecund>Abraço cultural.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta5")}><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta5")}><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
                             </ul>
                     </UlPrincipal>   
                 </Div2>

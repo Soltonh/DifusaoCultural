@@ -146,15 +146,14 @@ const TelaAssistencia: React.FC = () => {
                         (
                             <>
                                 <ParagrafoConteudoTexto>
-                                    Se você está em situação de tua, tem o direito a atendimento mesmo sem casa e sem documentos.
+                                    Se você está em situação de rua, tem o direito a atendimento mesmo sem casa e sem documentos.
                                 </ParagrafoConteudoTexto>
                                 <ParagrafoConteudoTexto>
                                     Deve procurar o CREAS (Centro de Referências Especializado) ou o CRAS da sua cidade, pois estes podem te 
                                     encaminhar a um abrigo e oferecer alimentação e orientação.
                                 </ParagrafoConteudoTexto>
                                 <ParagrafoConteudoTexto>
-                                    O site 
-                                    <TextoLink href="https://www.gov.br/pt-br/temas/servicos-para-imigrantes">
+                                    O site <TextoLink href="https://www.gov.br/pt-br/temas/servicos-para-imigrantes">
                                         https://www.gov.br/pt-br/temas/servicos-para-imigrantes
                                     </TextoLink> é um ótimo guia, pois disponibiliza os serviços
                                     que precisará utilizar para permanecer legalmente no país, seja como refugiado, estrangeiro residente ou 

@@ -123,8 +123,7 @@ const TelaDuvidas: React.FC = () => {
                                     programas sociais.
                                 </ParagrafoConteudoTexto>                          
                                 <ParagrafoConteudoTexto>
-                                    Você pode tirar gratuitamente pela internet no site da Receita Federal 
-                                    <TextoLink href="https://servicos.receita.fazenda.gov.br/servicos/cpf/inscricaocpfestrangeiro/default.asp">(https://servicos.receita.fazenda.gov.br/servicos/cpf/inscricaocpfestrangeiro/default.asp)</TextoLink> ou pessoalmente em uma 
+                                    Você pode tirar gratuitamente pela internet no site da Receita Federal <TextoLink href="https://servicos.receita.fazenda.gov.br/servicos/cpf/inscricaocpfestrangeiro/default.asp"> (https://servicos.receita.fazenda.gov.br/servicos/cpf/inscricaocpfestrangeiro/default.asp)</TextoLink> ou pessoalmente em uma 
                                     agência dos Correios.
                                 </ParagrafoConteudoTexto>                          
                             </>
@@ -141,7 +140,8 @@ const TelaDuvidas: React.FC = () => {
                                 <ParagrafoConteudoTexto>
                                     Procure uma delegacia e registre um boletim de ocorrência. Também é possível denunciar ligando para o 
                                     número 100 (Disque Direitos Humanos). A Defensoria Pública oferece atendimento jurídico gratuito, inclusive 
-                                    com intérpretes.
+                                    com intérpretes
+                                    (confira os endereços e telefone de contato do polo mais próximo: <TextoLink href=" https://www.defensoria.sp.def.br/institucional/enderecos-e-telefones?" target="_blank"> https://www.defensoria.sp.def.br/institucional/enderecos-e-telefones?</TextoLink>).
                                 </ParagrafoConteudoTexto>                         
                             </>
                         ),

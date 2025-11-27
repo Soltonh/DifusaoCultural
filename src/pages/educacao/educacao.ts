@@ -19,6 +19,14 @@ export const ParagrafoLinkPonto = styled.li`
     &:hover{
         color: blue;
     }
+
+    @media (max-width:980px){
+        font-size: 1.5rem;
+    }
+
+    @media (max-width:425px){
+        font-size: 1rem;
+    }
 `
 
 export const Numerada = styled.ol`

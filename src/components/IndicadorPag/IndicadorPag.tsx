@@ -50,12 +50,12 @@ export const Titulo = styled.h1`
     grid-column: 2/10;
 
     @media (max-width: 980px) {
-        font-size: 2rem;
+        font-size: 1.9rem;
         grid-column: 2 / 6;
     }
     
     @media (max-width: 425px) {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
 `

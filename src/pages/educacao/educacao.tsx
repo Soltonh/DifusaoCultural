@@ -5,6 +5,7 @@ import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoLink,
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import { A, ParagrafoLinkPonto } from "./educacao";
 import { useEffect } from "react";
+import { TextoLink } from "../naturaliza/naturaliza";
 
 const TelaEduca: React.FC = () => {
 
@@ -133,21 +134,21 @@ const TelaEduca: React.FC = () => {
                                 <ParagrafoConteudoTexto>
                                     Aqui vão 3 locais que oferecem o ensino EJA em São Paulo:
                                 </ParagrafoConteudoTexto>
-                                <a href="https://www.sesisp.org.br/educacao/nova-eja" target="_blank">
+                                <TextoLink href="https://www.sesisp.org.br/educacao/nova-eja" target="_blank">
                                     <ParagrafoLinkPonto>
                                         SESI: https://www.sesisp.org.br/educacao/nova-eja - telefone: 0800 876 8894 
                                     </ParagrafoLinkPonto>
-                                </a>
-                                <a href="https://eja.cps.sp.gov.br/ejacps/" target="_blank">
+                                </TextoLink>
+                                <TextoLink href="https://eja.cps.sp.gov.br/ejacps/" target="_blank">
                                     <ParagrafoLinkPonto>
                                         Centro Paula Souza: https://eja.cps.sp.gov.br/ejacps/
                                     </ParagrafoLinkPonto>
-                                </a>
-                                <a href="https://www.sesc.com.br/atuacoes/educacao/educacao-a-distancia/" target="_blank">
+                                </TextoLink>
+                                <TextoLink href="https://www.sesc.com.br/atuacoes/educacao/educacao-a-distancia/" target="_blank">
                                     <ParagrafoLinkPonto>
                                         SESC: https://www.sesc.com.br/atuacoes/educacao/educacao-a-distancia/ - telefone:  0800 222 7094 
                                     </ParagrafoLinkPonto>
-                                </a>
+                                </TextoLink>
                             </>
                         ),
                         },

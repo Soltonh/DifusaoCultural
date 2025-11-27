@@ -17,10 +17,13 @@ export const NavBar = styled.div`
 export const H2 = styled.h2`
     color: #264790;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2rem;
 
     @media (max-width: 768px){
-        font-size: 25px;
+        font-size: 20px;
+    }
+    @media (max-width: 768px){
+        font-size: 20px;
     }
     @media (max-width: 425px){
         font-size: 15px;
@@ -31,18 +34,32 @@ export const H3 = styled.h3`
     color: black;
     font-weight: 400;
     margin: auto;
-    font-size: 2vw;
+    font-size: 2rem;
+
+    @media (max-width: 1366px){
+        font-size: 1.5rem;
+    }
+    @media (max-width: 768px){
+        font-size: 20px;
+    }
+    @media (max-width: 425px){
+        font-size: 15px;
+    }
     
 `
 
 export const H1 = styled.h1`
     color: #264790;
-    font-size: 30px;
+    font-size: 2rem;
     width: 80vw;
     margin: auto;
-
-    @media (max-width: 600px){
+    
+    @media (max-width: 768px){
+        font-size: 1.3rem;
         text-align: center
+    }
+    @media (max-width: 425px){
+        font-size: 1.3rem;
     }
 `
 
