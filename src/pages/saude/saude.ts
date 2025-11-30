@@ -9,6 +9,7 @@ export const DivTextos = styled.div`
 export const Paragrafo = styled.p`
     font-size: 1.9rem;
     color: black;
+    text-align: justify;
 
     @media (max-width:980px){
         font-size: 1.5rem;

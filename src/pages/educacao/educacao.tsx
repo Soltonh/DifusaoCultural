@@ -31,7 +31,7 @@ const TelaEduca: React.FC = () => {
         <>  
             <IndicadoPag src={educaimg} tamanho="5vw" titulo="Educação no Brasil"/>
             <DivTextos>
-                <Paragrafo style={{textAlign: "center"}}>
+                <Paragrafo>
                     Se você chegou recentemente ao Brasil, saiba que a educação é um direito garantido a todas 
                     as pessoas, brasileiras ou não, independentemente da nacionalidade ou da situação migratória.
                 </Paragrafo>
