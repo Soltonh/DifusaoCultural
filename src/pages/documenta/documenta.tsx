@@ -1,10 +1,13 @@
 import type React from "react";
 import documentaimg from "../../assets/documentos.png"
 import IndicadoPag from "../../components/IndicadorPag/IndicadorPag"
-import { DivTextos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } from "../saude/saude";
+import { DivTextos, DivVideos, H2, H3, Paragrafo, ParagrafoConteudo, ParagrafoConteudoTexto } from "../saude/saude";
 import { SanfonaTextos } from "../../components/SanfonaTextos/Sanfonatextos";
 import { TextoLink } from "../naturaliza/naturaliza";
 import { useEffect } from "react";
+import Esp from "../../assets/esp.jpg"
+import Ptbr from "../../assets/ptbr.webp"
+import eng from "../../assets/eng.jpg"
 
 const TelaDocumenta: React.FC = () => {
 
@@ -117,6 +120,26 @@ const TelaDocumenta: React.FC = () => {
                                     A validade de acordo com a base legal de autorização de residência - pode ter prazo determinado (até 2 anos) 
                                     ou indeterminado (com renovação a cada 9 anos). A renovação deve ser feita 90 dias antes do vencimento.
                                 </ParagrafoConteudoTexto> 
+                                <DivVideos>
+                                    <div>
+                                        <h3>Passo a passo em Português Brasileiro</h3>
+                                        <img src={Ptbr}></img>
+                                        <iframe src="https://www.youtube.com/embed/i6Ein2srD1k" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Espanhol</h3>
+                                        <img src={Esp}></img>
+                                        <iframe src="https://www.youtube.com/embed/Hee5NJSrwt8?si=EgRM0qUYUYKwvr8x" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Inglês</h3>
+                                        <img src={eng}></img>
+                                        <iframe src="https://www.youtube.com/embed/C_cne-622Dg?si=x8Pw-m3Eb-e8TW7N" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                </DivVideos>
                             </>
                         ),
                         },
@@ -154,6 +177,26 @@ const TelaDocumenta: React.FC = () => {
                                     do processo sem julgamento, ou pedido indeferido, o DPRNM perde sua validade. Se o pedido for deferido, a 
                                     pessoa solicitante ganha direito de emitir a CRNM (Carteira de Registro Nacional Migratório).
                                 </ParagrafoConteudoTexto> 
+                                <DivVideos>
+                                    <div>
+                                        <h3>Passo a passo em Português Brasileiro</h3>
+                                        <img src={Ptbr}></img>
+                                        <iframe src="https://youtube.com/embed/2Ol4h1k3vT4?si=22eR5_bSWnYiACmc" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Espanhol</h3>
+                                        <img src={Esp}></img>
+                                        <iframe src="https://www.youtube.com/embed/v3vtAYHD3IU?si=_21pb3a_6mX4zmzp" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Inglês</h3>
+                                        <img src={eng}></img>
+                                        <iframe src="https://www.youtube.com/embed/aiRaiOrctsI?si=vcLococ3B_hb_sE0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                </DivVideos>
                             </>
                         ),
                         },
@@ -211,6 +254,26 @@ const TelaDocumenta: React.FC = () => {
                                     Para processos de refúgio deferidos, quando a pessoa migrante é reconhecida como refugiada, é preciso dar entrada no 
                                     pedido de residência no país.
                                 </ParagrafoConteudoTexto> 
+                                <DivVideos>
+                                    <div>
+                                        <h3>Passo a passo em Português Brasileiro</h3>
+                                        <img src={Ptbr}></img>
+                                        <iframe src="https://www.youtube.com/embed/UkCRA5fUWjI?si=zOpex8ihk8I2U2-f" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Espanhol</h3>
+                                        <img src={Esp}></img>
+                                        <iframe src="https://www.youtube.com/embed/BzMOgw3jO_s?si=AIWET92OytXhgwCW" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                    <div>
+                                        <h3>Passo a passo em Inglês</h3>
+                                        <img src={eng}></img>
+                                        <iframe src="https://www.youtube.com/embed/DLzSc4D1TP0?si=BnIn_BI9cp0LCdyT" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen;"/>
+                                    </div>
+                                </DivVideos>
                             </>
                         ),
                         },
