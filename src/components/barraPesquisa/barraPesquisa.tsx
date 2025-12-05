@@ -222,9 +222,9 @@ export const SEARCH_ITEMS: SearchItem[] = [
   },
   {
     id: "orienta5",
-    label: "Ajuda e orientação - Defensoria Pública da DPU",
+    label: "Ajuda e orientação - Defensoria Pública do Estado",
     path: "/orienta#orienta5",
-    keywords: ["dpu", "defensoria publica da uniao", "ajuda juridica"]
+    keywords: ["Estado", "defensoria publica da uniao", "ajuda juridica"]
   },
   {
     id: "orienta6",

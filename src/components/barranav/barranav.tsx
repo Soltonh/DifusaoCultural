@@ -249,7 +249,7 @@ const BarraNav: React.FC = () => {
                                 <Abarra onClick={() => navigate("/orienta#orienta2")}><LiSecund>Missão paz.</LiSecund></Abarra>
                                 <Abarra onClick={() => navigate("/orienta#orienta3")}><LiSecund>ACNUR.</LiSecund></Abarra>
                                 <Abarra onClick={() => navigate("/orienta#orienta4")}><LiSecund>Abraço cultural.</LiSecund></Abarra>
-                                <Abarra onClick={() => navigate("/orienta#orienta5")}><LiSecund>Defensoria Pública da DPU.</LiSecund></Abarra>
+                                <Abarra onClick={() => navigate("/orienta#orienta5")}><LiSecund>Defensoria Pública do Estado.</LiSecund></Abarra>
                                 <Abarra onClick={() => navigate("/orienta#orienta5")}><LiSecund>Organização Internacional para as Migrações.</LiSecund></Abarra>
                             </ul>
                     </UlPrincipal>   

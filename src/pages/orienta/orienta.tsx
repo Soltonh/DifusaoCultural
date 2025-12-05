@@ -153,7 +153,7 @@ const TelaOrienta: React.FC = () => {
                 <H3>Dentre os órgãos que tiram dúvidas, nós temos:</H3>
                 <SanfonaTextos
                     items={[
-                        {id: "orienta5", titulo: (<><H2>Defensoria Pública da DPU</H2></>), 
+                        {id: "orienta5", titulo: (<><H2>Defensoria Pública do Estado</H2></>), 
                         conteudo: 
                         (
                             <>
