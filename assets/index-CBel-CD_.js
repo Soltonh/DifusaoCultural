@@ -413,6 +413,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     border-radius: 20px;
     border: solid 1px black;
     
+
     & label{
         color: black;
         font-size: 20px;
@@ -461,6 +462,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
 
     & section{
         grid-area: 1 / span 2;
+
     }
 
 
@@ -475,6 +477,7 @@ Please change the parent <Route path="${L}"> to <Route path="${L==="/"?"*":`${L}
     & div{ 
         display: grid;
         grid-template-columns: 80% 150%;
+
     }
 `,Cx=W.div`
 
