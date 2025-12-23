@@ -9,7 +9,6 @@ import assisocial from "../../assets/assissocial.png"
 import documento from "../../assets/documentos.png"
 import orientacao from "../../assets/orientacao.png"
 import BarraNav from "../../components/barranav/barranav";
-import Forms from "../../components/forms/forms";
 
 const TelaInicial: React.FC = () => {
     return (
@@ -27,7 +26,6 @@ const TelaInicial: React.FC = () => {
                 <BlocoTelaInicial legenda="Documentação" src={documento} tamanho="6.8vw" navegar="/documentos"/>
                 <BlocoTelaInicial cor="#99E17A" legenda="Ajuda e orientação" src={orientacao} tamanho="6.8vw" navegar="/orienta"/>
             </QuadradosSec>
-            <Forms/>
         </FundoGeral>
     );
     
